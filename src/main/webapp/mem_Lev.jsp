@@ -21,12 +21,17 @@
 </div>
 <br><br>
 
+<<<<<<< HEAD
+<form action="/Kaihatu_ensyu/" method="post">
+氏名:<input type="text" name="name"class="form-text">
+=======
 <form action="/Kaihatu_ensyu2/DeleteServlet?action=delete" method="post">
 氏名<input type="text" name="name">
+>>>>>>> 42ae0eb2357943b99ebc38d84999422a82e5917a
 <br>
-ログインID<input type="text" name="liginID">
+ログインID:<input type="text" name="liginID"class="form-text">
 <br>
-パスワード<input type ="password" name="password">
+パスワード:<input type ="password" name="password"class="form-text">
 <br>
 <label>
   <input type="checkbox" name="checkLeave" value="checkLeave">

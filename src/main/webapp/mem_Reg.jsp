@@ -53,7 +53,7 @@
 				
 				
 
-				<input class="contact-submit" type="submit" value="登録" />
+				<input  type="submit" value="登録" class="button" />
 	</form>
 	<br>
 	<footer id="f3">

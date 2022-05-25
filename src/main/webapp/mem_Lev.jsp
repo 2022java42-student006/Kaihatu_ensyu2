@@ -34,8 +34,9 @@
  退会しますか？
  <br>
 </label>
+<br>
 	<input type="hidden" name="action" value="leave">
-	<input type="submit" value="退会する">
+	<input type="submit" value="退会する" class="button">
 	
 	<br>
 	<br>

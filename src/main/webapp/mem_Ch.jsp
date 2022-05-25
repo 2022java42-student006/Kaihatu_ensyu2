@@ -54,9 +54,10 @@
 
 			
 				
-				
+				<br>
+				<br>
 
-				<input class="contact-submit" type="submit" value="変更" />
+				<input class="button" type="submit" value="変更" />
 	</form>
 				
 			<footer id="f3">

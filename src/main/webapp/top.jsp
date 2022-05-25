@@ -27,7 +27,7 @@
 				
 				<form action="text" method="get">
 					<input type="search" name="search" placeholder="宿名を入力" class="form-text">
-					<input type="submit" name="submit" value="検索">
+					<input type="submit" name="submit" value="検索" class="button">
 					
 					
 					<br>
@@ -37,7 +37,7 @@
 				
 				
 					<input type="search" name="search" placeholder="キーワードを入力" class="form-text">
-					<input type="submit" name="submit" value="検索">
+					<input type="submit" name="submit" value="検索" class="button">
 				</form>
 					<br>
 					<br>

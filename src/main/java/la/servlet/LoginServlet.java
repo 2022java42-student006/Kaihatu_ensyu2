@@ -20,36 +20,38 @@ public class LoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
-		
+
 		String action = request.getParameter("action");
-		
+
 		if (action.equals("login")) {
-			
+
 			int login_id = Integer.parseInt(request.getParameter("login_id"));
 			String password = request.getParameter("password");
-//			System.out.println(login_id);
-//			System.out.println(password);
+			
 			try {
-				
+
 				LoginDAO dao = new LoginDAO();
 
 				if (dao.DisplayMemInfo(login_id, password)) {
-					
+
 					HttpSession session = request.getSession();
-					
+
 					session.setAttribute("member", dao.findMember(login_id));
-					
+
+					request.setAttribute("message", "ログイン成功しました");
 					gotoPage(request, response, "/mem_MyPage.jsp");
 				} else {
+					request.setAttribute("message", "もう一度ログインしてください");
 					gotoPage(request, response, "/mem_Login.jsp");
 
 				}
-				
+
 			} catch (DAOException e) {
 				e.printStackTrace();
 			}
 		}
 	}
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
@@ -62,6 +64,5 @@ public class LoginServlet extends HttpServlet {
 		rd.forward(request, response);
 
 	}
-	
 
 }

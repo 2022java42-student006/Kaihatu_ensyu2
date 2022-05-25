@@ -37,6 +37,7 @@
 		<br>
 		<input type="submit" value="ログイン"class="button"> <br> <br> 
 	</form>
+		${message}
 			<br>
 		<a href="mem_Lev.jsp"class="btn btn-flat"><span>退会手続きの方はこちら←</span></a>
 

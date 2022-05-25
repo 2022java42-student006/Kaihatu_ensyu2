@@ -27,7 +27,7 @@
 	<br>
 
 
-
+		${loginstate}
 
 		<input type="hidden" name="action" value="bookConfirm"> <br>
 

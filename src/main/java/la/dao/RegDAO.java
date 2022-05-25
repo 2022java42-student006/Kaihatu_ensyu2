@@ -30,7 +30,6 @@ public void saveMember(MemberBean member) throws DAOException{
 			Connection con = DriverManager.getConnection(url, user, pass);
 			PreparedStatement st = con.prepareStatement(sql);){
 				
-				
 				st.setString(1, member.getName());
 				st.setString(2, member.getMem_address());
 				st.setString(3, member.getTel());

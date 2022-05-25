@@ -38,10 +38,10 @@ public class LoginServlet extends HttpServlet {
 
 					session.setAttribute("member", dao.findMember(login_id));
 
-					request.setAttribute("message", "ログイン成功しました");
+					
 					gotoPage(request, response, "/mem_MyPage.jsp");
 				} else {
-					request.setAttribute("message", "もう一度ログインしてください");
+					
 					gotoPage(request, response, "/mem_Login.jsp");
 
 				}

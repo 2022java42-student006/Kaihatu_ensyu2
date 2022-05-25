@@ -17,8 +17,7 @@
 			住所<input type="text" name="hotel_address"><br>
 			電話番号<input type="text" name="hotel_tel"><br>
 			部屋数<input type="text" name="hotel_room"><br>
-			チェックイン時間<input type="text" name="hotel_checkin"><br>
-			チェックアウト時間<input type="text" name="hotel_checkout"><br>
+			プランID<input type="text" name="plan_id"><br>
 			<input type="submit" value="登録">
 		</form>
 		<a href="add_hotelTop.jsp">戻る</a>

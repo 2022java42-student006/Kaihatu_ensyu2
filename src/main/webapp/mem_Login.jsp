@@ -32,10 +32,10 @@
 
 	<form action="/Kaihatu_ensyu2/LoginServlet?action=login" method="post">
 	<br><br>
-		ログインID<input type="text" name="login_id"> <br> 
-		パスワード<input type="password" name="password"> <br> 
-		
-		<input type="submit" value="ログイン"> <br> <br> 
+		ログインID<input type="text" name="login_id"class="form-text"> <br> 
+		パスワード<input type="password" name="password"class="form-text"> <br> 
+		<br>
+		<input type="submit" value="ログイン"class="button"> <br> <br> 
 	</form>
 			<br>
 		<a href="mem_Lev.jsp"class="btn btn-flat"><span>退会手続きの方はこちら←</span></a>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="/Kaihatu_ensyu/css/style.css" rel="stylesheet">
+<link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -22,7 +22,7 @@
 		</div>
 	
 	<br>
-	<form action="/Kaihatu_ensyu/RegServlet?action=mem_reg" method="post">
+	<form action="/Kaihatu_ensyu2/RegServlet?action=mem_reg" method="post">
 				名前
 					<input type="text" name ="name" class="form-text"/>
 			<br>

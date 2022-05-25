@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="/Kaihatu_ensyu/css/style.css" rel="stylesheet">
+<link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>ログインに失敗しました</title>
 </head>

@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>ログイン</title>
 </head>
-<link href="/Kaihatu_ensyu/css/style.css" rel="stylesheet">
+<link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <body>
 	<div class="sample_h_7">
 		<p>ログイン</p>

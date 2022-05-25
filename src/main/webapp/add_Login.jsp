@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="/Kaihatu_ensyu/css/style.css" rel="stylesheet">
+<link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>管理者ログイン画面</title>
 </head>
@@ -13,7 +13,7 @@
 		<h3>管理者ログイン</h3><a href="top.jsp">戻る</a>
 		<br>
 				
-				<form action="/Kaihatu_ensyu/Add_LoginServlet?action=login_info" method="post">
+				<form action="/Kaihatu_ensyu2/Add_LoginServlet?action=login_info" method="post">
 				管理者ID:
 				<input type="text" name="add_username">
 				<br>	

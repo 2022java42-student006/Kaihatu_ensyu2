@@ -11,7 +11,7 @@
 	<div class="sample_h_7">
 		<p>ログイン</p>
 
-<<<<<<< HEAD
+
 <%-- <form action="/Kaihatu_ensyu/LoginServlet?action=login" method="post">
 ログインID<input type="text" name="loginID">
 <br>
@@ -19,9 +19,7 @@
 <br>
 <input type="submit" value="ログイン">
 </form>--%>
-=======
 
->>>>>>> 44f29ad03df565164f49723bacc213932ecdcea7
 		<ul class="snip1217">
 			<div id="menu">
 				<li class="current"><a href="top.jsp">ホーム</a></li>

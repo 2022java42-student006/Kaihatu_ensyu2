@@ -13,53 +13,53 @@ import la.bean.MemberBean;
 import la.dao.DAOException;
 import la.dao.RegDAO;
 
-
-
 @WebServlet("/Mem_ChangeServlet")
 public class ChangeServlet extends HttpServlet {
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		try{
-			
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		try {
+
 			request.setCharacterEncoding("UTF-8");
-			
+
 			String year = request.getParameter("year");
 			String month = request.getParameter("month");
 			String day = request.getParameter("day");
-			
+
 			String birthday = year + "-" + month + "-" + day;
-			
+
 			MemberBean bean = new MemberBean();
 			bean.setName(request.getParameter("name"));
 			bean.setMem_address(request.getParameter("mem_address"));
-			bean.setPhone(request.getParameter("tel"));
+			bean.setTel(request.getParameter("tel"));
 			bean.setEmail(request.getParameter("email"));
 			bean.setBirthday(birthday);
 			bean.setLogin_id(Integer.parseInt(request.getParameter("login_id")));
 			bean.setPass(request.getParameter("password"));
-			
+
 			RegDAO reg = new RegDAO();
-			
+
 			reg.saveMember(bean);
-		
-			session.setAttribute("member", bean);
 
 			gotoPage(request, response, "/mem_MyPage.jsp");
-			
-			}catch(DAOException e) {
-				e.printStackTrace();
-				
-			}
-				
+
+		} catch (DAOException e) {
+			e.printStackTrace();
+
 		}
-		private void gotoPage(HttpServletRequest request, HttpServletResponse response, String page) throws ServletException, IOException {
-			RequestDispatcher rd = request.getRequestDispatcher(page);
-			rd.forward(request, response);
-		}
-		
-		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
+	}
+
+	private void gotoPage(HttpServletRequest request, HttpServletResponse response, String page)
+			throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher(page);
+		rd.forward(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		doGet(request, response);
 	}
 

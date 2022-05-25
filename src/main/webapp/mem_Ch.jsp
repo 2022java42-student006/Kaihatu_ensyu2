@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="/Kaihatu_ensyu/css/style.css" rel="stylesheet">
+<link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>会員情報変更</title>
 </head>
@@ -25,7 +25,7 @@
 		
 	<br>
 	<h4>※変更する場合は、変更したい記入事項のみ記入</h4>
-				<form action="/Kaihatu_ensyu/RegServlet?action=mem_reg" method="post">
+				<form action="/Kaihatu_ensyu2/RegServlet?action=mem_reg" method="post">
 				名前
 					<input type="text" name ="name" class="form-text"/>
 			<br>

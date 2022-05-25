@@ -21,14 +21,14 @@
 <tr><td>　</td><td>　</td><td>　</td><td>　</td></tr>
 </table>
 
-<form action="/Kaihatu_ensyu/" method="post">
+<form action="/Kaihatu_ensyu2/ChangeServlet?action=changeMemData" method="post">
 <input type="submit" value="変更">
-<input type="hidden" name="action" value="changeMemData"> 
+ 
 </form>
 
 <form action="/Kaihatu_ensyu2/DeleteServlet?action=delete" method="post">
 <input type="submit" value="削除">
-<input type="hidden" name="memberID" value="delete">
+
 </form>
 
 <br>

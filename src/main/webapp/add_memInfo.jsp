@@ -16,7 +16,7 @@
 会員情報<br>
 <table border ="1">
 <tr><td>会員ID</td><td>氏名</td><td>住所</td><td>電話番号</td></tr>
-<tr><td>　</td><td></td><td>　</td><td>　</td></tr>
+<tr><td>}</td><td></td><td>　</td><td>　</td></tr>
 <tr><td>E-mail</td><td>生年月日</td><td>入会年月日</td><td>退会年月日</td></tr>
 <tr><td>　</td><td>　</td><td>　</td><td>　</td></tr>
 </table>
@@ -26,7 +26,7 @@
 <input type="hidden" name="action" value="changeMemData"> 
 </form>
 
-<form action="/Kaihatu_ensyu/DeleteServlet?action=delete" method="post">
+<form action="/Kaihatu_ensyu2/DeleteServlet?action=delete" method="post">
 <input type="submit" value="削除">
 <input type="hidden" name="memberID" value="delete">
 </form>

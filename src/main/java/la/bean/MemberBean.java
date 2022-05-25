@@ -33,6 +33,10 @@ public class MemberBean implements Serializable {
 		this.login_id=login;
 	}
 
+	public MemberBean() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
 	public void setMem_id(int mem_id) {
 		this.mem_id = mem_id;
 	}

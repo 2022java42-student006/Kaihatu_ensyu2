@@ -14,9 +14,10 @@
 <img src="" alt="警告" >
 <br>
 <a>削除してもよろしいですか？</a>
-<form action="">
+<form action="/Kaihatu_ensyu2/DeleteServlet?action=delete" method="post">
 <input type="submit" value=削除>
 </form>
+
 <form action=""><input type="submit" value="キャンセル"></form>
 </body>
 </html>

@@ -8,47 +8,59 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import la.bean.MemberBean;
 import la.dao.DAOException;
 import la.dao.DeleteDAO;
 
 @WebServlet("/DeleteServlet")
 public class DeleteServlet extends HttpServlet {
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		try{
+		try {
 			request.setCharacterEncoding("UTF-8");
-			
+
 			String action = request.getParameter("action");
 			DeleteDAO dao = new DeleteDAO();
-			
-			
-			
-			if(action.equals("delete")) {
-				int mem_id= Integer.parseInt(request.getParameter("memberID"));
-				dao.deleteBymemberID(mem_id);
+
+			if (action.equals("confirm")) {
 				
-				
-				gotoPage(request, response, "/add_memDelRes.jsp");
+				//テスト用
+				HttpSession session = request.getSession();
+				MemberBean bean = new MemberBean();
+				bean.setMem_id(3);
+				session.setAttribute("member", bean);
+				//MemberBean bean = (MemberBean) session.getAttribute("member");
+				gotoPage(request, response, "/add_memDel.jsp");
+				return;
 			}
-			
-		}catch(DAOException e) {
+			if (action.equals("delete")) {
+				HttpSession session = request.getSession();
+				// 結合テスト時"memberを用変更
+				MemberBean bean = (MemberBean) session.getAttribute("member");
+				int mem_id = bean.getMem_id();
+				dao.deleteBymemberID(mem_id);
+				gotoPage(request, response, "/add_memDelRes.jsp");
+				return;
+			}
+
+		} catch (DAOException e) {
 			e.printStackTrace();
 
 		}
-		
-		
-		
-		
-		}
 
-	private void gotoPage(HttpServletRequest request, HttpServletResponse response, String page) throws ServletException, IOException {
+	}
+
+	private void gotoPage(HttpServletRequest request, HttpServletResponse response, String page)
+			throws ServletException, IOException {
 		RequestDispatcher rd = request.getRequestDispatcher(page);
 		rd.forward(request, response);
 	}
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

@@ -32,6 +32,9 @@ public class MemberBean implements Serializable {
 		this.email=email;
 		this.login_id=login;
 	}
+	public MemberBean() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
 
 	public MemberBean() {
 		// TODO 自動生成されたコンストラクター・スタブ

@@ -14,7 +14,7 @@
     
     
 
-<form action="/lesson/ItemServlet3" method="post">
+<form action="/Kaihatu_ensyu2/ItemServlet3" method="post">
 修正:宿ID<input type="text" name="code" size="5">予約プランを<input type="text"
 name="price" size="5">に<input type="submit" value="変更">
 <input type="hidden" name="action" value="update">

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="/Kaihatu_ensyu/css/style.css" rel="stylesheet">
+<link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>退会手続き</title>
 </head>
@@ -21,7 +21,7 @@
 </div>
 <br><br>
 
-<form action="/Kaihatu_ensyu/" method="post">
+<form action="/Kaihatu_ensyu2/DeleteServlet?action=delete" method="post">
 氏名<input type="text" name="name">
 <br>
 ログインID<input type="text" name="liginID">
@@ -34,8 +34,9 @@
  退会しますか？
  <br>
 </label>
-	<input type="hidden" name="action" value="leave">
-	<input type="submit" value="退会する">
+<br>
+	
+	<input type="submit" value="退会する" class="button">
 	
 	<br>
 	<br>

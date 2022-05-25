@@ -12,7 +12,7 @@
 	<h1>会員新規登録画面</h1>
 	<a href="add_memTop.jsp">戻る</a>
 	
-	<form action="/Kaihatu_ensyu/Add_RegServlet?action=mem_reg" method="post">
+	<form action="/Kaihatu_ensyu2/Add_RegServlet?action=mem_reg" method="post">
 		名前
 					<input type="text" name ="name" class="form-text"/>
 			<br>

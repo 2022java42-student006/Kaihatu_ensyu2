@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="/Kaihatu_ensyu/css/style.css" rel="stylesheet">
+<link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>マイページ</title>
 </head>
@@ -38,9 +38,10 @@
 		<a href="mem_Lev.jsp" class="btn btn-flat"><span>退会</span></a>
 
 
-
-		<form action="/Kaihatu_ensyu/LogoutServlet?action=logout" method="post">
-			<label> <input type="submit" value="ログアウト"> <input
+<br>
+<br>
+		<form action="/Kaihatu_ensyu2/LogoutServlet?action=logout" method="post">
+			<label> <input type="submit" value="ログアウト" class="button"> <input
 				type="hidden" name="action" value="logout">
 			</label>
 			<br>

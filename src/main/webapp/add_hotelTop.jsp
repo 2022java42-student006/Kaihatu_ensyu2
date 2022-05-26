@@ -11,8 +11,8 @@
 	<jsp:include page="/addMenu.jsp" />
 		<h3>宿管理</h3><a href="add_Top.jsp">戻る</a>
 				
-				<form action="text" method="get">
-					<input type="search" name="search" plachholder="キーワードを入力" class="form-text">
+				<form action="/Kaihatu_ensyu2/SearchHotelServlet?action=search" method="post">
+					<input type="search" name="ac_id" placeholder="宿ID">
 					<input type="submit" name="submit" value="検索">
 					
 					</form>

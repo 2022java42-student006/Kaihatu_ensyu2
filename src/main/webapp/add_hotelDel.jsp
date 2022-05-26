@@ -10,6 +10,10 @@
 	<body>
 	<jsp:include page="/addMenu.jsp" />
 		<h3>削除してよろしいでしょうか。</h3>
-		<a href="add_hotelDelRes.jsp">はい</a>　　　<a href="add_hotelInfo.jsp">いいえ</a>
+		<form action="/Kaihatu_ensyu2/DeleteHotelServlet?action=delete" method="post">
+<input type="submit" name ="ac_id" value=削除>
+</form>
+
+<form action="/Kaihatu_ensyu2/add_hotelInfo.jsp"><input type="submit" value="キャンセル"></form>
 	</body>
 </html>

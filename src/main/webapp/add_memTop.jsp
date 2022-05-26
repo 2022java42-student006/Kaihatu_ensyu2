@@ -25,7 +25,7 @@
 <br>
 
 <form action="/Kaihatu_ensyu2/SearchServlet?action=search" method="post">
-<input type="search" name="login_id" placeholder="会員名">
+<input type="search" name="login_id" placeholder="会員ID">
 <input type="submit" name="submit" value="検索"></form>
 </body>
 </html>

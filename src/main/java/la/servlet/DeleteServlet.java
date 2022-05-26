@@ -25,19 +25,8 @@ public class DeleteServlet extends HttpServlet {
 			String action = request.getParameter("action");
 			DeleteDAO dao = new DeleteDAO();
 
-			if (action.equals("confirm")) {
-				
-				//テスト用 mem_id=3を消しました
-				HttpSession session = request.getSession();
-				MemberBean bean = new MemberBean();
-				bean.setMem_id(3);
-				session.setAttribute("member", bean);
-				//ここまでテスト用
-				//MemberBean bean = (MemberBean) session.getAttribute("member");
-				gotoPage(request, response, "/add_memDel.jsp");
-				return;
-			}
-			if (action.equals("delete")) {
+			
+				if (action.equals("delete")) {
 				HttpSession session = request.getSession();
 				// 結合テスト時"memberを要変更
 				MemberBean bean = (MemberBean) session.getAttribute("member");

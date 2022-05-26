@@ -11,7 +11,7 @@
 	<jsp:include page="/addMenu.jsp" />
 		<h3>宿登録</h3>
 		
-		<form action="" method="post">
+		<form action="/Kaihatu_ensyu2/Add_hotelServlet" method="post">
 			宿名<input type="text" name="hotel_name"><br>
 			分類コード<input type="text" name="hotel_code"><br>
 			住所<input type="text" name="hotel_address"><br>

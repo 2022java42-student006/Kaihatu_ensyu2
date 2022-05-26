@@ -12,6 +12,8 @@ public class MemberBean implements Serializable {
 	private String birthday;
 	private int login_id;
 	private String password;
+	private String endate;
+	private String seDate;
 
 	
 
@@ -25,6 +27,22 @@ public class MemberBean implements Serializable {
 		this.login_id = login_id;
 		this.password = password;
 	}
+	
+	public MemberBean(int mem_id,String name, String tel, String email, String mem_address, String birthday,
+			int login_id, String password, String en_date, String se_date) {
+		this.mem_id= mem_id;
+		this.name = name;
+		this.tel = tel;
+		this.email = email;
+		this.mem_address = mem_address;
+		this.birthday = birthday;
+		this.login_id = login_id;
+		this.password = password;
+		this.endate = en_date;
+		this.seDate = se_date;
+	}
+	
+	
 	
 	public MemberBean(String name,String tel,String email,int login) {
 		this.name=name;
@@ -92,6 +110,22 @@ public class MemberBean implements Serializable {
 		return login_id;
 	}
 	
+	public String getEndate() {
+		return endate;
+	}
+
+	public void setEndate(String endate) {
+		this.endate = endate;
+	}
+
+	public String getSeDate() {
+		return seDate;
+	}
+
+	public void setSeDate(String seDate) {
+		this.seDate = seDate;
+	}
+
 	public void setPass(String password) {
 		this.password = password;
 	}
@@ -99,5 +133,6 @@ public class MemberBean implements Serializable {
 	public String getPass() {
 		return password;
 	}
+	
 
 }

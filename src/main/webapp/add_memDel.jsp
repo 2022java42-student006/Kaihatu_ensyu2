@@ -15,9 +15,9 @@
 <br>
 <a>削除してもよろしいですか？</a>
 <form action="/Kaihatu_ensyu2/DeleteServlet?action=delete" method="post">
-<input type="submit" value=削除>
+<input type="submit" name ="mem_id" value=削除>
 </form>
 
-<form action=""><input type="submit" value="キャンセル"></form>
+<form action="/Kaihatu_ensyu2/add_memInfo.jsp"><input type="submit" value="キャンセル"></form>
 </body>
 </html>

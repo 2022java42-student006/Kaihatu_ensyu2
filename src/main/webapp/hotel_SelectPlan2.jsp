@@ -20,20 +20,7 @@
 <br>
 
 チェックイン日
-<select name="checkInMonth">
-<option value="Jan">1</option>
-<option value="Feb">2</option>
-<option value="Mar">3</option>
-<option value="Apr">4</option>
-<option value="May">5</option>
-<option value="Jun">6</option>
-<option value="Jul">7</option>
-<option value="Aug">8</option>
-<option value="Sep">9</option>
-<option value="Oct">10</option>
-<option value="Nov">11</option>
-<option value="Dec">12</option>
-</select>月
+<p value="Jan">1月
 
 <select name="checkInDate">
 
@@ -68,27 +55,14 @@
 <option value="1">29</option>
 <option value="1">30</option>
 <option value="1">31</option>
-</select>日
+</select>日</p>
 
 
 <br>
 <br>
 
 チェックアウト日
-<select name="checkOutMonth">
-<option value="Jan">1</option>
-<option value="Feb">2</option>
-<option value="Mar">3</option>
-<option value="Apr">4</option>
-<option value="May">5</option>
-<option value="Jun">6</option>
-<option value="Jul">7</option>
-<option value="Aug">8</option>
-<option value="Sep">9</option>
-<option value="Oct">10</option>
-<option value="Nov">11</option>
-<option value="Dec">12</option>
-</select>月
+<p value="Jan">1月
 
 <select name="checkOutDate">
 
@@ -123,7 +97,7 @@
 <option value="1">29</option>
 <option value="1">30</option>
 <option value="1">31</option>
-</select>日
+</select>日</p>
 
 
 <br>

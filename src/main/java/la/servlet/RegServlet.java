@@ -51,9 +51,8 @@ public class RegServlet extends HttpServlet {
 		}catch(DAOException e) {
 			e.printStackTrace();
 			
-		}
-			
-	}
+		}	
+	} 
 	private void gotoPage(HttpServletRequest request, HttpServletResponse response, String page) throws ServletException, IOException {
 		RequestDispatcher rd = request.getRequestDispatcher(page);
 		rd.forward(request, response);

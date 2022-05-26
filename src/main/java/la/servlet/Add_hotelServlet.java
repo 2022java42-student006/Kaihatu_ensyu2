@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import la.bean.HotelBean;
 import la.dao.DAOException;
@@ -26,18 +25,17 @@ public class Add_hotelServlet extends HttpServlet {
 			
 			HotelBean bean = new HotelBean();
 			
-			bean.setAc_name(request.getParameter("ac_name"));
-			bean.setAc_code(Integer.parseInt(request.getParameter("ac_code")));
-			bean.setAc_address(request.getParameter("ac_addrerequestss"));
-			bean.setAc_tel(request.getParameter("ac_tel"));
-			bean.setAc_Room(Integer.parseInt(request.getParameter("ac_roon")));
-			bean.setplan_id(Integer.parseInt(request.getParameter("ac_plan")));
+			bean.setAc_name(request.getParameter("hotel_name"));
+			bean.setAc_code(Integer.parseInt(request.getParameter("hotel_code")));
+			bean.setAc_address(request.getParameter("hotel_address"));
+			bean.setAc_tel(request.getParameter("hotel_tel"));
+			bean.setAc_Room(Integer.parseInt(request.getParameter("hotel_room")));
+			bean.setplan_id(Integer.parseInt(request.getParameter("plan_id")));
 			
 			HotelDAO reg = new HotelDAO();
 			reg.saveHotel(bean);
-			HttpSession session = request.getSession();
-			session.setAttribute("hotel", bean);
-			gotoPage(request,response,"/add_hotelReg.jsp");
+			
+			gotoPage(request,response,"/add_hotelTop.jsp");
 		}catch(DAOException e) {
 			e.printStackTrace();
 		}

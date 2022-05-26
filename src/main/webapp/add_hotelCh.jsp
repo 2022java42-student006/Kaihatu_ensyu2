@@ -19,7 +19,7 @@
 			部屋数<input type="text" name="hotel_room"><br>
 			チェックイン時間<input type="text" name="hotel_checkin"><br>
 			チェックアウト時間<input type="text" name="hotel_checkout"><br>
-			<input type="submit" value="登録">
+			<input type="submit" value="変更">
 		</form>
 	</body>
 	

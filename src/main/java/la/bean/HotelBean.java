@@ -74,7 +74,7 @@ public class HotelBean implements Serializable {
 		return ac_room;
 	}
 	
-	public void set(int plan_id) {
+	public void setplan_id(int plan_id) {
 		this.plan_id = plan_id;
 	}
 	

@@ -31,6 +31,10 @@ public class Add_hotelServlet extends HttpServlet {
 			bean.setAc_tel(request.getParameter("hotel_tel"));
 			bean.setAc_Room(Integer.parseInt(request.getParameter("hotel_room")));
 			bean.setplan_id(Integer.parseInt(request.getParameter("plan_id")));
+			bean.setCheckin_time(Integer.parseInt(request.getParameter("checkin_time")));
+			bean.setCheckout_time(Integer.parseInt(request.getParameter("checkout_time")));
+
+			
 			
 			HotelDAO reg = new HotelDAO();
 			reg.saveHotel(bean);

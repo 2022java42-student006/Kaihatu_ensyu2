@@ -14,7 +14,7 @@
 <a href="add_Top.jsp">戻る</a>
 <br>
 <br>
-<form action="/" method="post">
+
 
 <%--<input type="submit" value="新規会員登録"><br>
 <input type="text" name="add_mem_reg"> --%>
@@ -24,8 +24,8 @@
 <br>
 <br>
 
-
-<input type="search" name="search" placeholder="会員名">
+<form action="/Kaihatu_ensyu2/SearchServlet?action=search" method="post">
+<input type="search" name="login_id" placeholder="会員名">
 <input type="submit" name="submit" value="検索"></form>
 </body>
 </html>

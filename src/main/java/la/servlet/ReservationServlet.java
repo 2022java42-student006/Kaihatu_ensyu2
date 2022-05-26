@@ -29,6 +29,7 @@ public class ReservationServlet extends HttpServlet {
 				bean.setPlan_id(Integer.parseInt(request.getParameter("plan_id")));
 				bean.setCi_date(Integer.parseInt(request.getParameter("ci_date")));
 				bean.setCo_date(Integer.parseInt(request.getParameter("co_date")));
+				bean.setNum_people(Integer.parseInt(request.getParameter("num_people")));
 
 				ReservationDAO dao = new ReservationDAO();
 

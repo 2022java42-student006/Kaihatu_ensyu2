@@ -22,13 +22,14 @@ public class ReservationDAO {
 	}
 
 	public void AcReserved(ReservationBean reserve) throws DAOException {
-		String sql = "INSERT INTO reservation(mem_id,ci_date,co_date) VALUES(?,?,?)";
+		String sql = "INSERT INTO reservation(mem_id,plan_id,ci_date,co_date,num_people) VALUES(?,?,?,?)";
 		try (Connection con = DriverManager.getConnection(url, user, pass);
 				PreparedStatement st = con.prepareStatement(sql);) {
 			st.setInt(1, reserve.getMem_id());
 			st.setInt(2, reserve.getPlan_id());
 			st.setInt(3, reserve.getCi_date());
 			st.setInt(4, reserve.getCo_date());
+			st.setInt(5, reserve.getNum_people());
 			
 			st.executeQuery();
 		}catch (SQLException e) {

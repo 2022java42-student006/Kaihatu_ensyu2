@@ -6,16 +6,18 @@ public class ReservationBean {
 	private int plan_id;
 	private int ci_date;
 	private int co_date;
+	private int num_pepole;
 
 	public ReservationBean() {
 
 	}
 
-	ReservationBean(int mem_id, int plan_id, int ci_date, int co_date) {
+	ReservationBean(int mem_id, int plan_id, int ci_date, int co_date,int num_people) {
 		this.mem_id = mem_id;
 		this.plan_id = plan_id;
 		this.ci_date = ci_date;
 		this.co_date = co_date;
+		this.num_pepole=num_people;
 	}
 
 	public void setMem_id(int mem_id) {
@@ -48,5 +50,11 @@ public class ReservationBean {
 
 	public int getCo_date() {
 		return co_date;
+	}
+	public void setNum_people(int num_people) {
+		this.num_pepole=num_people;
+	}
+	public int getNum_people() {
+		return num_pepole;
 	}
 }

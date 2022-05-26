@@ -4,6 +4,8 @@ public class ReservationBean {
 
 	private int mem_id;
 	private int plan_id;
+	private int login_id;
+	private String password;
 	private int ci_date;
 	private int co_date;
 	private int num_pepole;
@@ -12,12 +14,18 @@ public class ReservationBean {
 
 	}
 
-	ReservationBean(int mem_id, int plan_id, int ci_date, int co_date,int num_people) {
+	public ReservationBean(int mem_id, int plan_id, int login_id,String password,int ci_date, int co_date,int num_people) {
 		this.mem_id = mem_id;
 		this.plan_id = plan_id;
+		this.login_id=login_id;
+		this.password=password;
 		this.ci_date = ci_date;
 		this.co_date = co_date;
 		this.num_pepole=num_people;
+	}
+	public ReservationBean(int ci_date,int co_date){
+		this.ci_date=ci_date;
+		this.co_date=co_date;
 	}
 
 	public void setMem_id(int mem_id) {
@@ -34,6 +42,18 @@ public class ReservationBean {
 
 	public int getPlan_id() {
 		return plan_id;
+	}
+	public void setLogin_id(int login_id) {
+		this.login_id = login_id;
+	}
+	public int getLogin_id() {
+		return login_id;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getPassword() {
+		return password;
 	}
 
 	public void setCi_date(int ci_date) {

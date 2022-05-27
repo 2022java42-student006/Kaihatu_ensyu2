@@ -13,11 +13,11 @@
 		
 		<form action="/Kaihatu_ensyu2/Add_hotelServlet" method="post">
 			宿名<input type="text" name="hotel_name"><br>
-			分類コード<input type="text" name="hotel_code"><br>
+			
 			住所<input type="text" name="hotel_address"><br>
 			電話番号<input type="text" name="hotel_tel"><br>
 			部屋数<input type="text" name="hotel_room"><br>
-			プランID<input type="text" name="plan_id"><br>
+			
 			チェックイン時間<input type="text" name="checkin_time">時<br>
 			チェックアウト時間<input type="text" name="checkout_time">時<br>
 			<input type="submit" value="登録">

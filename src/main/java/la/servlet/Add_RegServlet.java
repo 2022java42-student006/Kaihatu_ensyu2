@@ -35,7 +35,7 @@ public class Add_RegServlet extends HttpServlet {
 		bean.setBirthday(birthday);
 		
 		bean.setLogin_id(Integer.parseInt(request.getParameter("login_id")));
-		bean.setPass(request.getParameter("password"));
+		bean.setPassword(request.getParameter("password"));
 		
 		RegDAO reg = new RegDAO();
 		

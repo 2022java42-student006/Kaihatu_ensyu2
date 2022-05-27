@@ -16,10 +16,7 @@
 			<td>宿名</td>
 			<td>${hotel.ac_name}</td>
 		</tr>
-		<tr>
-			<td>分類コード</td>
-			<td>${hotel.ac_code}</td>
-		</tr>
+		
 		<tr>
 			<td>住所</td>
 			<td>${hotel.ac_address}</td>

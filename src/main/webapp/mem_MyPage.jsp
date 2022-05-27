@@ -29,14 +29,16 @@
 
 		${loginstate}
 
-		<input type="hidden" name="action" value="bookConfirm"> <br>
+		<br>
 
 
 		氏名：${member.name} <br> 電話番号：${member.tel} <br>
 		E-mail:${member.email} <br> ログインID：${member.login_id} <br> <br>
 		<br> <a href="mem_Ch.jsp" class="btn btn-flat"><span>変更</span></a>
 		<a href="mem_Lev.jsp" class="btn btn-flat"><span>退会</span></a>
-
+	<form action="/Kaihatu_ensyu2/checkReserveServlet?action=check" method="post">
+	<input type ="submit" value="予約確認">
+	</form>
 
 <br>
 <br>
@@ -46,6 +48,7 @@
 			</label>
 			<br>
 		</form>
+		
 
 		<footer id="f3">
 			<h1 class="f">新宿トラベル</h1>

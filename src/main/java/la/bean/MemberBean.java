@@ -146,11 +146,11 @@ public class MemberBean implements Serializable {
 		this.seDate = seDate;
 	}
 
-	public void setPass(String password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	public String getPass() {
+	public String getPassword() {
 		return password;
 	}
 	

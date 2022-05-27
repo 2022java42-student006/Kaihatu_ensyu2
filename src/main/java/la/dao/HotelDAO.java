@@ -37,21 +37,21 @@ public class HotelDAO {
 			throw new DAOException("レコードの操作に失敗しました。");
 		}
 
-		String sql = "INSERT INTO accommodation_information(ac_id, ac_name,ac_code,ac_address,ac_tel,ac_room,plan_id, checkin_time, checkout_time)"
-				+ " VALUES(?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO accommodation_information(ac_id, ac_name,ac_address,ac_tel,ac_room, checkin_time, checkout_time)"
+				+ " VALUES(?,?,?,?,?,?,?)";
 
 		try (Connection con = DriverManager.getConnection(url, user, pass);
 				PreparedStatement st = con.prepareStatement(sql);) {
 
 			st.setInt(1, ac_id);
 			st.setString(2, hotel.getAc_name());
-			st.setInt(3, hotel.getAc_code());
-			st.setString(4, hotel.getAc_address());
-			st.setString(5, hotel.getAc_tel());
-			st.setInt(6, hotel.getAc_room());
-			st.setInt(7, hotel.getplan_id());
-			st.setInt(8, hotel.getCheckin_time());
-			st.setInt(9, hotel.getCheckout_time());
+			
+			st.setString(3, hotel.getAc_address());
+			st.setString(4, hotel.getAc_tel());
+			st.setInt(5, hotel.getAc_room());
+			
+			st.setInt(6, hotel.getCheckin_time());
+			st.setInt(7, hotel.getCheckout_time());
 
 			st.executeUpdate();
 

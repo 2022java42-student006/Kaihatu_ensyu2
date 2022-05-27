@@ -8,12 +8,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import la.bean.MemberBean;
 import la.dao.ChangeDAO;
 import la.dao.DAOException;
+import la.dao.SearchMemberDAO;
 
-@WebServlet("/Add_ChangeServlet")
+@WebServlet("/Add_ChServlet")
 public class Add_ChServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -27,22 +29,31 @@ public class Add_ChServlet extends HttpServlet {
 			String day = request.getParameter("day");
 
 			String Birthday = year + "-" + month + "-" + day;
-
+			
 			MemberBean bean = new MemberBean();
 			bean.setName(request.getParameter("name"));
-			bean.setMem_address(request.getParameter("Mem_address"));
+			bean.setMem_address(request.getParameter("mem_address"));
 			bean.setTel(request.getParameter("Tel"));
 			bean.setEmail(request.getParameter("Email"));
 			bean.setBirthday(Birthday);
-
 			bean.setLogin_id(Integer.parseInt(request.getParameter("login_id")));
-			bean.setPass(request.getParameter("password"));
+			bean.setPassword(request.getParameter("password"));
 
 			ChangeDAO change = new ChangeDAO();
+			
+			HttpSession session = request.getSession();
+			MemberBean bean1 = (MemberBean)session.getAttribute("member");
+			
+			int mem_id = bean1.getMem_id();
 
-			change.saveMember(bean);
+			change.saveMember(bean, mem_id);
 
-			gotoPage(request, response, "/add_memTop.jsp");
+			SearchMemberDAO dao = new SearchMemberDAO();
+			MemberBean bean2 = dao.findMember(bean.getLogin_id());
+			
+			session.setAttribute("member", bean2);
+			
+			gotoPage(request, response, "/add_memInfo.jsp");
 
 		} catch (DAOException e) {
 			e.printStackTrace();
@@ -61,4 +72,4 @@ public class Add_ChServlet extends HttpServlet {
 
 		doGet(request, response);
 	}
-}                                      
+}

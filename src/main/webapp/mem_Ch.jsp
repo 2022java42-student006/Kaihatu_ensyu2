@@ -25,25 +25,25 @@
 		
 	<br>
 	<h4>※変更する場合は、変更したい記入事項のみ記入</h4>
-				<form action="/Kaihatu_ensyu2/RegServlet?action=mem_reg" method="post">
+				<form action="/Kaihatu_ensyu2/ChangeServlet" method="post">
 				名前
-					<input type="text" name ="name" class="form-text"/>
+					<input type="text" name ="name" class="form-text" value="${member.name}"/>
 			<br>
 				住所
-					<input type="text" name="mem_address" class="form-text"/>
+					<input type="text" name="mem_address" class="form-text" value="${member.mem_address}"/>
 			<br>
 				電話番号
-					<input type="tel" name="tel" class="form-text"/>
+					<input type="tel" name="tel" class="form-text" value="${member.tel}"/>
 			<br>
 				メール
-					<input type="email" name="email" class="form-text"/>
+					<input type="email" name="email" class="form-text" value="${member.email}"/>
 				
 			<br>
 				ログインID
-					<input type="text" name="login_id" class="form-text"/>
+					<input type="text" name="login_id" class="form-text" value="${member.login_id}"/>
 			<br>
 				パスワード
-					<input type="password" name="password" class="form-text"/>
+					<input type="password" name="password" class="form-text" value="${member.password}"/>
 	
 
 			<br>

@@ -13,6 +13,10 @@ public class HotelBean implements Serializable {
 	private int plan_id;
 	private int checkin_time;
 	private int checkout_time;
+	
+	private String plan_sub;
+	private int price;
+	private int room_num;
 
 	public HotelBean() {
 
@@ -29,6 +33,15 @@ public class HotelBean implements Serializable {
 		this.plan_id = plan_id;
 		this.checkin_time = checkin_time;
 		this.checkout_time = checkout_time;
+	}
+	
+	public HotelBean(int plan_id, int ac_id, String ac_name, String plan_sub, int price, int room_num) {
+		this.plan_id = plan_id;
+		this.ac_id = ac_id;
+		this.ac_name = ac_name;
+		this.plan_sub= plan_sub;
+		this.price = price;
+		this.room_num = room_num;
 	}
 
 	public void setAc_id(int ac_id) {
@@ -101,5 +114,29 @@ public class HotelBean implements Serializable {
 
 	public int getCheckout_time() {
 		return checkout_time;
+	}
+	
+	public void setPlan_sub(String plan_sub) {
+		this.plan_sub = plan_sub;
+	}
+	
+	public String getPlan_sub() {
+		return plan_sub;
+	}
+	
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	public int getPrice() {
+		return price;
+	}
+	
+	public void setRoom_num(int room_num) {
+		this.room_num = room_num;
+	}
+	
+	public int getRoom_num(){
+		return room_num;
 	}
 }

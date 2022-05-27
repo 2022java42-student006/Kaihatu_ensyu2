@@ -35,7 +35,7 @@ public void saveMember(MemberBean member) throws DAOException{
 				st.setString(3, member.getTel());
 				st.setString(4, member.getEmail());
 				st.setInt(5, member.getLogin_id());
-				st.setString(6, member.getPassword());
+				st.setString(6, member.getPass());
 				
 				st.executeUpdate();
 				

@@ -13,7 +13,7 @@
 		<h3>宿プラン登録</h3>
 		
 		<table border=1>
-		<tr><td>宿名  </td><td>住所  </td><td>チェックイン時間  </td><td>チェックアウト時間  </td><td>電話番号</td></tr>
+		<tr><td>宿名 </td><td>住所  </td><td>チェックイン時間  </td><td>チェックアウト時間  </td><td>電話番号</td></tr>
 		<tr><td>${hotel.ac_name}  </td><td>${hotel.ac_address}  </td><td>${hotel.checkin_time}時  </td><td>${hotel.checkout_time}  </td><td>${hotel.ac_tel}</td></tr>
 		
 		
@@ -31,7 +31,7 @@
 		<table>
 		<c:forEach items="${plans}" var="plan">
 		<tr><td>プラン名  </td><td>プラン内容  </td><td>金額(/人) </td><td>部屋数 </td></tr>
-		<tr><td> ${plan.plan_name}</td><td>${plan.plan_sub }  </td><td>${pla.price } </td><td>${plan.room_num } </td></tr>
+		<tr><td> ${plan.plan_name}</td><td>${plan.plan_sub }  </td><td>${plan.price } </td><td>${plan.room_num } </td></tr>
 		
 		</c:forEach>
 		</table>

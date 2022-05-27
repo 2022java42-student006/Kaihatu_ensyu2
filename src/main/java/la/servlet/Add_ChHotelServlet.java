@@ -7,8 +7,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import la.bean.HotelBean;
+import la.bean.MemberBean;
+import la.dao.Add_ChHotelDAO;
+import la.dao.SearchMemberDAO;
 
 
 @WebServlet("/Add_ChHotelServlet")
@@ -28,6 +32,21 @@ public class Add_ChHotelServlet extends HttpServlet {
 		bean.setCheckin_time(Integer.parseInt(request.getParameter("checkin_time")));
 		bean.setCheckout_time(Integer.parseInt(request.getParameter("checkout_time")));
 	
+		Add_ChHotelDAO change = new Add_ChHotelDAO();
+		
+		HttpSession session = request.getSession();
+		HotelBean bean1 = (HotelBean)session.getAttribute("");
+		
+		int mem_id = bean1.getMem_id();
+
+		change.saveHotel(bean, mem_id);
+
+		 dao = new ();
+		HotelBean bean2 = dao.saveHotel(bean.getAc_id());
+		
+		session.setAttribute("", bean2);
+		
+		gotoPage(request, response, "/add_memInfo.jsp");
 	}
 
 	

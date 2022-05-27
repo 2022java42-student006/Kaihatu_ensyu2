@@ -25,7 +25,7 @@
 				<p>宿名で検索:</p>
 				
 				
-				<form action="text" method="get">
+				<form action="/Kaihatu_ensyu2/hotel_SeaNameRes.jsp" method="get">
 					<input type="search" name="search" placeholder="宿名を入力" class="form-text">
 					<input type="submit" name="submit" value="検索" class="button">
 					

@@ -16,9 +16,8 @@
 プランID:プラン<input type="tel" name="plan_id" size="1" maxlength="4" >
 <br>
 <br>
-会員ID:<input type="tel" name="mem_id" size="5" maxlength="4">
-<br>
-<br>
+
+
 
 宿泊人数:<input type="tel" name="num_people" size="4" maxlength="2">人
 

@@ -22,7 +22,8 @@ public class HotelDAO {
 	}
 	
 	public void saveHotel(HotelBean hotel) throws DAOException{
-	String sql = "INSERT INTO accommodation_information(ac_name,ac_code,ac_address,ac_tel,ac_room,plan_id) VALUES(?,?,?,?,?,?)";
+	String sql = "INSERT INTO accommodation_information(ac_name,ac_code,ac_address,ac_tel,ac_room,plan_id, checkin_time, checkout_time)"
+			+ " VALUES(?,?,?,?,?,?,?,?)";
 		
 	try(
 		Connection con = DriverManager.getConnection(url,user,pass);
@@ -34,6 +35,8 @@ public class HotelDAO {
 		st.setString(4, hotel.getAc_tel());
 		st.setInt(5, hotel.getAc_room());
 		st.setInt(6, hotel.getplan_id());
+		st.setInt(7, hotel.getCheckin_time());
+		st.setInt(8, hotel.getCheckout_time());
 		
 		st.executeUpdate();
 	}catch(SQLException e) {

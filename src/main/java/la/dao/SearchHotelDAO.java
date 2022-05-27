@@ -41,8 +41,9 @@ public class SearchHotelDAO {
 					String ac_tel = rs.getString("ac_tel");
 					int ac_room = rs.getInt("ac_room");
 					int plan_id = rs.getInt("plan_id");
-					
-					bean = new HotelBean(acId, ac_name, ac_code, ac_address, ac_tel, ac_room, plan_id);
+					int checkin_time = rs.getInt("checkin_time");
+					int checkout_time = rs.getInt("checkout_time");
+					bean = new HotelBean(acId, ac_name, ac_code, ac_address, ac_tel, ac_room, plan_id, checkin_time, checkout_time);
 					
 				}
 				return bean;

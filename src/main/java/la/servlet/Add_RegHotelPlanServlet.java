@@ -14,9 +14,8 @@ import la.dao.DAOException;
 import la.dao.HotelDAO;
 
 
-
-@WebServlet("/Add_hotelServlet")
-public class Add_hotelServlet extends HttpServlet {
+@WebServlet("/Add_RegHotelPlanServlet")
+public class Add_RegHotelPlanServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
@@ -25,14 +24,12 @@ public class Add_hotelServlet extends HttpServlet {
 			
 			HotelBean bean = new HotelBean();
 			
-			bean.setAc_name(request.getParameter("hotel_name"));
-			bean.setAc_code(Integer.parseInt(request.getParameter("hotel_code")));
-			bean.setAc_address(request.getParameter("hotel_address"));
-			bean.setAc_tel(request.getParameter("hotel_tel"));
-			bean.setAc_Room(Integer.parseInt(request.getParameter("hotel_room")));
 			bean.setplan_id(Integer.parseInt(request.getParameter("plan_id")));
-			bean.setCheckin_time(Integer.parseInt(request.getParameter("checkin_time")));
-			bean.setCheckout_time(Integer.parseInt(request.getParameter("checkout_time")));
+			bean.setAc_id(Integer.parseInt(request.getParameter("ac_id")));
+			bean.setAc_name(request.getParameter("hotel_name"));
+			bean.setPlan_sub(request.getParameter("plan_sub"));
+			bean.setPrice(Integer.parseInt(request.getParameter("price")));
+			bean.setRoom_num(Integer.parseInt(request.getParameter("room_num")));
 
 			
 			

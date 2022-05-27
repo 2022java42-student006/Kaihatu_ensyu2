@@ -4,6 +4,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import la.bean.HotelBean;
 
@@ -22,20 +24,20 @@ public class SearchHotelDAO {
 		}
 	}
 	
-	public HotelBean findHotel(int ac_id) throws DAOException{
-		String sql ="SELECT * FROM accommodation_information WHERE ac_id =?";
+	public List<HotelBean> findHotel(String ac_Name) throws DAOException{
+		String sql ="SELECT * FROM accommodation_information WHERE ac_name =?";
 		
 		
 		try (Connection con = DriverManager.getConnection(url, user, pass);
 				PreparedStatement st = con.prepareStatement(sql);) {
 
-			st.setInt(1, ac_id);
+			st.setString(1, ac_Name);
 
 			try (ResultSet rs = st.executeQuery();) {
-				HotelBean bean=null;
+				List<HotelBean> list = new ArrayList<HotelBean>();
 				while (rs.next()) {
 					int acId = rs.getInt("ac_id");
-					String ac_name = rs.getString("ac_name");
+					String ac_name = rs.getString("ac_name"); 
 					int ac_code = rs.getInt("ac_code");
 					String ac_address = rs.getString("ac_address");
 					String ac_tel = rs.getString("ac_tel");
@@ -43,10 +45,10 @@ public class SearchHotelDAO {
 					int plan_id = rs.getInt("plan_id");
 					int checkin_time = rs.getInt("checkin_time");
 					int checkout_time = rs.getInt("checkout_time");
-					bean = new HotelBean(acId, ac_name, ac_code, ac_address, ac_tel, ac_room, plan_id, checkin_time, checkout_time);
-					
+					HotelBean bean = new HotelBean(acId, ac_name, ac_code, ac_address, ac_tel, ac_room, plan_id, checkin_time, checkout_time);
+					list.add(bean);
 				}
-				return bean;
+				return list;
 
 			} catch (SQLException e) {
 

@@ -37,7 +37,7 @@ public class Add_ChServlet extends HttpServlet {
 			bean.setEmail(request.getParameter("Email"));
 			bean.setBirthday(Birthday);
 			bean.setLogin_id(Integer.parseInt(request.getParameter("login_id")));
-			bean.setPassword(request.getParameter("password"));
+			bean.setPass(request.getParameter("password"));
 
 			ChangeDAO change = new ChangeDAO();
 			

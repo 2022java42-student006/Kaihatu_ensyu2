@@ -33,7 +33,7 @@ public class SearchMemberDAO {
 			st.setInt(1, login_id);
 
 			try (ResultSet rs = st.executeQuery();) {
-				MemberBean bean=null;
+				MemberBean bean = null;
 				while (rs.next()) {
 					int mem_id = rs.getInt("mem_id");
 					String name = rs.getString("name");
@@ -43,13 +43,11 @@ public class SearchMemberDAO {
 					String birthday = rs.getString("birthday");
 					int loginId = rs.getInt("login_id");
 					String password = rs.getString("password");
-					String en_date= rs.getString("en_date");
+					String en_date = rs.getString("en_date");
 					String se_date = rs.getString("se_date");
-					bean = new MemberBean(mem_id, name, tel, emailAddress, address, birthday, loginId,
-							password, en_date, se_date);
-					
+					bean = new MemberBean(mem_id, name, tel, emailAddress, address, birthday, loginId, password,
+							en_date, se_date);
 
-				
 				}
 				return bean;
 

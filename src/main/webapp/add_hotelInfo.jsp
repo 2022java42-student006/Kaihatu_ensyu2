@@ -38,7 +38,7 @@
 			<td>${hotel.checkin_time}時</td>
 		</tr>
 		<tr>
-			<td>部屋数</td>
+			<td>チェックアウト時間</td>
 			<td>${hotel.checkout_time}時</td>
 		</tr>
 

@@ -10,6 +10,7 @@ public class HotelBean implements Serializable {
 	private String ac_address;
 	private String ac_tel;
 	private int ac_room;
+
 	
 	private int checkin_time;
 	private int checkout_time;

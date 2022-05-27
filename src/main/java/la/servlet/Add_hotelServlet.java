@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import la.bean.HotelBean;
 import la.dao.DAOException;
@@ -34,12 +35,15 @@ public class Add_hotelServlet extends HttpServlet {
 			bean.setCheckin_time(Integer.parseInt(request.getParameter("checkin_time")));
 			bean.setCheckout_time(Integer.parseInt(request.getParameter("checkout_time")));
 
-			
+			request.setAttribute("hotel", bean);
 			
 			HotelDAO reg = new HotelDAO();
+			int ac_id = reg.saveHotel(bean);
 			reg.saveHotel(bean);
 			
-			gotoPage(request,response,"/add_hotelTop.jsp");
+			HttpSession session = request.getSession();
+			session.setAttribute("ac_id", ac_id);
+			gotoPage(request,response,"/add_hotelPlanReg.jsp");
 		}catch(DAOException e) {
 			e.printStackTrace();
 		}

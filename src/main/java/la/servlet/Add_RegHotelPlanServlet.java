@@ -8,10 +8,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import la.bean.HotelBean;
+import la.dao.Add_RegHotelPlanDAO;
 import la.dao.DAOException;
-import la.dao.HotelDAO;
 
 
 @WebServlet("/Add_RegHotelPlanServlet")
@@ -23,18 +24,19 @@ public class Add_RegHotelPlanServlet extends HttpServlet {
 			request.setCharacterEncoding("UTF-8");
 			
 			HotelBean bean = new HotelBean();
-			
-			bean.setplan_id(Integer.parseInt(request.getParameter("plan_id")));
-			bean.setAc_id(Integer.parseInt(request.getParameter("ac_id")));
-			bean.setAc_name(request.getParameter("hotel_name"));
+		
+			bean.setPlan_name(request.getParameter("plan_name"));
 			bean.setPlan_sub(request.getParameter("plan_sub"));
 			bean.setPrice(Integer.parseInt(request.getParameter("price")));
 			bean.setRoom_num(Integer.parseInt(request.getParameter("room_num")));
 
+			HttpSession session = request.getSession();
 			
+			int ac_id = (int) session.getAttribute("ac_id");
 			
-			HotelDAO reg = new HotelDAO();
-			reg.saveHotel(bean);
+			Add_RegHotelPlanDAO reg = new Add_RegHotelPlanDAO();
+			reg.savePlan(bean, ac_id);
+			
 			
 			gotoPage(request,response,"/add_hotelTop.jsp");
 		}catch(DAOException e) {

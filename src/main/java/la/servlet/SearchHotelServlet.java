@@ -1,6 +1,7 @@
 package la.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,7 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import la.bean.HotelBean;
 import la.dao.DAOException;
@@ -19,25 +19,27 @@ import la.dao.SearchHotelDAO;
 public class SearchHotelServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		try {
 			request.setCharacterEncoding("UTF-8");
 
 			String action = request.getParameter("action");
-			SearchHotelDAO dao = new SearchHotelDAO();
+			
 
 			if (action.equals("search")) {
-				HttpSession session = request.getSession();
-				int ac_id = Integer.parseInt(request.getParameter("ac_id"));
-				HotelBean bean = dao.findHotel(ac_id);
-
-				session.setAttribute("hotel", bean);
-				gotoPage(request, response, "/add_hotelInfo.jsp");
+				//HttpSession session = request.getSession();
+				String ac_name = request.getParameter("ac_name");
+				List<HotelBean> list;
+				try {
+					SearchHotelDAO dao = new SearchHotelDAO();
+					list = dao.findHotel(ac_name);
+					//session.setAttribute("hotel", list);
+					request.setAttribute("hotel", list);
+					gotoPage(request, response, "/hotel_SeaNameRes.jsp");
+				} catch (DAOException e) {
+					// TODO: handle exception
+				}
 
 			}
-		} catch (DAOException e) {
-			e.printStackTrace();
-
-		}
+		
 
 	}
 	

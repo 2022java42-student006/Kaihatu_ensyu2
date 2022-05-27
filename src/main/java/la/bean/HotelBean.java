@@ -10,10 +10,11 @@ public class HotelBean implements Serializable {
 	private String ac_address;
 	private String ac_tel;
 	private int ac_room;
-	private int plan_id;
+	
 	private int checkin_time;
 	private int checkout_time;
 	
+	private int plan_id;
 	private String plan_name;
 	private String plan_sub;
 	private int price;
@@ -23,7 +24,7 @@ public class HotelBean implements Serializable {
 
 	}
 
-	public HotelBean(int ac_id, String ac_name, int ac_code, String ac_address, String ac_tel, int ac_room, int plan_id,
+	public HotelBean(int ac_id, String ac_name, int ac_code, String ac_address, String ac_tel, int ac_room, 
 			int checkin_time, int checkout_time) {
 		this.ac_id = ac_id;
 		this.ac_name = ac_name;
@@ -31,9 +32,17 @@ public class HotelBean implements Serializable {
 		this.ac_address = ac_address;
 		this.ac_tel = ac_tel;
 		this.ac_room = ac_room;
-		this.plan_id = plan_id;
 		this.checkin_time = checkin_time;
 		this.checkout_time = checkout_time;
+	}
+	public HotelBean(int ac_id ,String ac_name, int ac_code, String ac_address, String ac_tel, int ac_room) {
+		this.ac_id=ac_id;
+		this.ac_name=ac_name;
+		this.ac_code=ac_code;
+		this.ac_address=ac_address;
+		this.ac_tel=ac_tel;
+		this.ac_room=ac_room;
+
 	}
 	
 	public HotelBean(int plan_id, int ac_id, String plan_name, String plan_sub, int price, int room_num) {

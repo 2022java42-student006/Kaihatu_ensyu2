@@ -25,8 +25,7 @@ public class DeleteServlet extends HttpServlet {
 			String action = request.getParameter("action");
 			DeleteDAO dao = new DeleteDAO();
 
-			
-				if (action.equals("delete")) {
+			if (action.equals("delete")) {
 				HttpSession session = request.getSession();
 				// 結合テスト時"memberを要変更
 				MemberBean bean = (MemberBean) session.getAttribute("member");

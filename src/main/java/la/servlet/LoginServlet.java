@@ -37,7 +37,6 @@ public class LoginServlet extends HttpServlet {
 					HttpSession session = request.getSession();
 
 					session.setAttribute("member", dao.findMember(login_id));
-
 					
 					gotoPage(request, response, "/mem_MyPage.jsp");
 				} else {

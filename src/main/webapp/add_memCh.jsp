@@ -30,7 +30,7 @@ E-mail<input type="text" name="Email" value="${member.email}"><br>
 <br>
 <input type="submit" value="保存">
 <input type="hidden" name="action" value="keepmemch"> 
-</form>>
+</form>
 
 </body>
 </html>

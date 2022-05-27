@@ -5,7 +5,7 @@
 <head>
 <link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>会員登録</title>
 </head>
 <body>
 		<div class="sample_h_7">

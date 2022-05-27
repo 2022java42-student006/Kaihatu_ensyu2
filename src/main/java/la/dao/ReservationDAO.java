@@ -60,7 +60,7 @@ public class ReservationDAO {
 			st.setInt(4, reserve.getCo_date());
 			st.setInt(5, reserve.getNum_people());
 
-			st.executeQuery();
+			st.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new DAOException("レコードの操作に失敗しました。");

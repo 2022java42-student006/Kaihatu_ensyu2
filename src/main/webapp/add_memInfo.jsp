@@ -44,7 +44,7 @@
 
 </table>
 
-<form action="/Kaihatu_ensyu2/ChangeServlet?action=changeMemData" method="post">
+<form action="/Kaihatu_ensyu2/add_memCh.jsp" method="post">
 <input type="submit" value="変更">
  
 </form>

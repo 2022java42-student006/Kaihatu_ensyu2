@@ -36,16 +36,14 @@ public class SearchHotelDAO {
 			try (ResultSet rs = st.executeQuery();) {
 				List<HotelBean> list = new ArrayList<HotelBean>();
 				while (rs.next()) {
-					int acId = rs.getInt("ac_id");
+					int ac_id = rs.getInt("ac_id");
 					String ac_name = rs.getString("ac_name"); 
 					int ac_code = rs.getInt("ac_code");
 					String ac_address = rs.getString("ac_address");
 					String ac_tel = rs.getString("ac_tel");
 					int ac_room = rs.getInt("ac_room");
-					int plan_id = rs.getInt("plan_id");
-					int checkin_time = rs.getInt("checkin_time");
-					int checkout_time = rs.getInt("checkout_time");
-					HotelBean bean = new HotelBean(acId, ac_name, ac_code, ac_address, ac_tel, ac_room, plan_id, checkin_time, checkout_time);
+					
+					HotelBean bean = new HotelBean(ac_id, ac_name, ac_code, ac_address, ac_tel, ac_room);
 					list.add(bean);
 				}
 				return list;

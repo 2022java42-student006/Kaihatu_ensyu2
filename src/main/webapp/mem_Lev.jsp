@@ -22,7 +22,7 @@
 <br><br>
 
 
-<form action="/Kaihatu_ensyu/" method="post">
+<form action="/Kaihatu_ensyu2/LeaveServlet?action=leave" method="post">
 氏名:<input type="text" name="name"class="form-text">
 
 <br>

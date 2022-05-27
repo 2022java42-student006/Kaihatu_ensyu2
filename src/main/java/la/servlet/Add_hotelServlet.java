@@ -35,13 +35,14 @@ public class Add_hotelServlet extends HttpServlet {
 			bean.setCheckin_time(Integer.parseInt(request.getParameter("checkin_time")));
 			bean.setCheckout_time(Integer.parseInt(request.getParameter("checkout_time")));
 
-			request.setAttribute("hotel", bean);
+			
 			
 			HotelDAO reg = new HotelDAO();
 			int ac_id = reg.saveHotel(bean);
 			reg.saveHotel(bean);
 			
 			HttpSession session = request.getSession();
+			session.setAttribute("hotel", bean);
 			session.setAttribute("ac_id", ac_id);
 			gotoPage(request,response,"/add_hotelPlanReg.jsp");
 		}catch(DAOException e) {

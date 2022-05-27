@@ -1,6 +1,7 @@
 package la.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -38,7 +39,10 @@ public class Add_RegHotelPlanServlet extends HttpServlet {
 			reg.savePlan(bean, ac_id);
 			
 			
-			gotoPage(request,response,"/add_hotelTop.jsp");
+			List<HotelBean>list=reg.showPlan(ac_id);
+			session.setAttribute("plans", list);
+			
+			gotoPage(request,response,"/add_hotelPlanReg.jsp");
 		}catch(DAOException e) {
 			e.printStackTrace();
 		}

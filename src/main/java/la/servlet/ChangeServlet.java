@@ -8,12 +8,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import la.bean.MemberBean;
+import la.dao.ChangeDAO;
 import la.dao.DAOException;
-import la.dao.RegDAO;
+import la.dao.SearchMemberDAO;
 
-@WebServlet("/Mem_ChangeServlet")
+@WebServlet("/ChangeServlet")
 public class ChangeServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -36,11 +38,22 @@ public class ChangeServlet extends HttpServlet {
 			bean.setEmail(request.getParameter("email"));
 			bean.setBirthday(birthday);
 			bean.setLogin_id(Integer.parseInt(request.getParameter("login_id")));
-			bean.setPass(request.getParameter("password"));
+			bean.setPassword(request.getParameter("password"));
 
-			RegDAO reg = new RegDAO();
+			ChangeDAO change = new ChangeDAO();
+			
+			HttpSession session = request.getSession();
+			
+			MemberBean bean1 = (MemberBean)session.getAttribute("member");
+			
+			int mem_id = bean1.getMem_id();
 
-			reg.saveMember(bean);
+			change.saveMember(bean, mem_id);
+
+			SearchMemberDAO dao = new SearchMemberDAO();
+			MemberBean bean2 = dao.findMember(bean.getLogin_id());
+			
+			session.setAttribute("member", bean2);
 
 			gotoPage(request, response, "/mem_MyPage.jsp");
 

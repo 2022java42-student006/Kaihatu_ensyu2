@@ -11,10 +11,18 @@
 	<jsp:include page="/addMenu.jsp" />
 		<h3>宿プラン登録</h3>
 		
-		<form action="" method="post">
-			プラン名<input type="text" name="hotel_name"><br>
-			金額<input type="text" name="hotel_code"><br>
-			人数<input type="text" name="hotel_address"><br>
+		<table border=1>
+		<tr><td>宿名  </td><td>住所  </td><td>チェックイン時間  </td><td>チェックアウト時間  </td><td>電話番号</td></tr>
+		<tr><td>${hotel.ac_name}  </td><td>${hotel.ac_address}  </td><td>${hotel.checkin_time}時  </td><td>${hotel.checkin_time}  </td><td>${hotel.ac_tel}</td></tr>
+		
+		
+		</table>
+		
+		<form action="/Kaihatu_ensyu2/Add_RegHotelPlanServlet" method="post">
+			プラン名<input type="text" name="plan_name"><br>
+			プラン内容<input type="text" name="plan_sub"><br>
+			金額<input type="text" name="price"><br>
+			部屋数<input type="text" name="room_num"><br>
 			<input type="submit" value="登録">
 		</form>
 		

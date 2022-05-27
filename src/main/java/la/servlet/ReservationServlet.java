@@ -29,28 +29,48 @@ public class ReservationServlet extends HttpServlet {
 				int cidate = Integer.parseInt(request.getParameter("ci_date"));
 				int codate = Integer.parseInt(request.getParameter("co_date"));
 				int planid = Integer.parseInt(request.getParameter("plan_id"));
-				if (cidate - codate < 0) {
+				if (cidate - codate > 0) {
 					// error
+					System.out.println("日にちエラー");
 					gotoPage(request, response, "/hotel_SelectPlan2.jsp");
-				}
-				ReservationDAO dao = new ReservationDAO();
-				List<ReservationBean> list = dao.CheckDate(planid);
-				for (ReservationBean li : list) {
-					if (li.getCi_date() > codate || li.getCo_date() < cidate) {
-						ReservationBean bean = new ReservationBean();
-						//bean.setMem_id(bean.getMem_id());
+				} else {
+					ReservationDAO dao = new ReservationDAO();
+					List<ReservationBean> list = dao.CheckDate(planid);
+					ReservationBean bean = new ReservationBean();
+					Boolean bool = true;
+					
+					for (ReservationBean li : list) {
+						if (li.getCi_date() > codate || li.getCo_date() < cidate) {
+							
+							// bean.setMem_id(bean.getMem_id());
+//							bean.setMem_id(3);
+//							bean.setPlan_id(planid);
+//							bean.setCi_date(cidate);
+//							bean.setCo_date(codate);
+//							bean.setNum_people(Integer.parseInt(request.getParameter("num_people")));
+
+							System.out.println("正常");
+							
+						}else {
+							System.out.println("範囲エラー");
+							bool = false;
+							break;
+						}
+					}
+					if(bool) {
 						bean.setMem_id(3);
 						bean.setPlan_id(planid);
 						bean.setCi_date(cidate);
 						bean.setCo_date(codate);
 						bean.setNum_people(Integer.parseInt(request.getParameter("num_people")));
-
-						dao.AcReserved(bean);
-
 						session.setAttribute("reserve", bean);
-
+						System.out.println("予約完了");
 						gotoPage(request, response, "/mem_MyPage.jsp");
+						dao.AcReserved(bean);
+					}else {
+						gotoPage(request, response, "/hotel_SelectPlan2.jsp");
 					}
+					
 				}
 
 			}

@@ -13,7 +13,7 @@ import la.bean.MemberBean;
 import la.dao.DAOException;
 import la.dao.RegDAO;
 
-@WebServlet("/Mem_ChangeServlet")
+@WebServlet("/ChangeServlet")
 public class ChangeServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

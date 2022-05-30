@@ -28,34 +28,41 @@ public class SearchHotelServlet extends HttpServlet {
 
 		if (action.equals("hotelsearch")) {
 			try {
-				
 				SearchHotelDAO dao = new SearchHotelDAO();
 				HttpSession session = request.getSession();
 				String ac_name = request.getParameter("ac_Name");
 				List<HotelBean> list = dao.findHotel(ac_name);
+				
+				if(list.size() == 0) {
+					request.setAttribute("message", "検索結果がありません。再検索してください");
+					gotoPage(request, response, "/top.jsp");
+					
+				}
 				session.setAttribute("hotel", list);
 				gotoPage(request, response, "/hotel_SeaNameRes.jsp");
 			} catch (DAOException e) {
+				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
-				
 			}
 		}
-
-		if (action.equals("search")) {
+		
+		
+		if(action.equals("search")){
 			try {
-				ADD_searchHotelInfoDAO dao = new ADD_searchHotelInfoDAO();
-				HttpSession session = request.getSession();
-				String ac_name = request.getParameter("ac_name");
-				List<HotelBean> list = dao.findHotel(ac_name);
-				session.setAttribute("hotels", list);
-				gotoPage(request, response, "/add_hotelInfo.jsp");
-			} catch (DAOException e) {
-				e.printStackTrace();
-				
+				 ADD_searchHotelInfoDAO dao = new ADD_searchHotelInfoDAO();
+				 HttpSession session = request.getSession();
+					String ac_name = request.getParameter("ac_name");
+					List<HotelBean> list = dao.findHotel(ac_name);
+					session.setAttribute("hotels", list);
+					gotoPage(request, response, "/add_hotelInfo.jsp");
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
 			}
+		
 		}
 
-	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

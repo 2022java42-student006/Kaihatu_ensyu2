@@ -28,6 +28,7 @@ public class SearchHotelServlet extends HttpServlet {
 
 		if (action.equals("hotelsearch")) {
 			try {
+				
 				SearchHotelDAO dao = new SearchHotelDAO();
 				HttpSession session = request.getSession();
 				String ac_name = request.getParameter("ac_Name");

@@ -46,7 +46,8 @@
 	</table>
 <br>
 		<br>
-	<form action="/Kaihatu_ensyu2/add_hotelCh.jsp" method="post">
+	<form action="/Kaihatu_ensyu2/Add_ChHotelServlet?action=change" method="post">
+		<input type ="hidden" name="ac_id" value ="${ hotel.ac_id}">
 		<input type="submit" value="変更">
 
 	</form>

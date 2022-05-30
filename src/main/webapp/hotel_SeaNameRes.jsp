@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +37,7 @@
 		<c:forEach items="${hotel}" var="item">
 
 		<tr>
-			<td>${item.ac_name}</td>
+			<td>宿名：<a href="/Kaihatu_ensyu2/hotel_Info">${item.ac_name}</a>　住所：${item.ac_address}</td>
 		</tr>
 		</c:forEach>
 		

@@ -5,30 +5,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="/Kaihatu_ensyu2/css/kanri_style.css" rel="stylesheet">
+<link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>管理者ログイン画面</title>
 </head>
 
 	<body>
-	<div class="text1">
+
+	<div class="sample_h_7">
+			<p>新宿トラベル 管理画面</p>
+			<p>管理者ログイン</p>
+			
 	
-	<jsp:include page="/addMenu2.jsp" />
-		<h3>管理者ログイン</h3>
+			<ul class="snip1217">
+					<div id="menu">
+					<li class="current">
+  					</div>
+			</ul>
+	</div>
 		<br>
 				
 				<form action="/Kaihatu_ensyu2/Add_LoginServlet?action=login_info" method="post">
 				管理者ID:
 				
-				<input type="text" name="login_id" class="text2">
+				<input type="text" name="login_id" class="form-text">
 				
 				<br>
 				パスワード:
 				
-				<input type="password" name="password" class="text2"><br>
+				<input type="password" name="password" class="form-text"><br>
 				
-				
-				<input class="text2" type="submit" value="ログイン" >
+				<br>
+				<input class="button" type="submit" value="ログイン" >
 				
 				</form>
 				<br>	

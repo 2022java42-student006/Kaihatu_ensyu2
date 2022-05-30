@@ -40,7 +40,7 @@
 				
 				</form>
 				<br>	
-				<a href="top.jsp" class="btn btn-flat"><span>戻る</span></a>
+				<a href="top.jsp" class="btn btn-flat"><span>　　戻る　　</span></a>
 		
 		
 		<footer id="f3">

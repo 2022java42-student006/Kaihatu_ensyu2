@@ -19,7 +19,7 @@
 	</ul>
 </div>
 <br>
-	<a href="add_memTop.jsp"class="btn btn-flat"><span>戻る</span></a>
+	<a href="add_memTop.jsp"class="btn btn-flat"><span>　　戻る　　</span></a>
 	
 	<form action="/Kaihatu_ensyu2/Add_RegServlet?action=mem_reg" method="post">
 		名前
@@ -55,6 +55,6 @@
 	<footer id="f3">
   			<h1 class="f">新宿トラベル</h1>
  		 	<h2 class="f1">&copy;  Shinjuku Travel</h2>
-</footer>
+	</footer>
 </body>
 </html>

@@ -34,8 +34,8 @@
 
 		氏名：${member.name} <br> 電話番号：${member.tel} <br>
 		E-mail:${member.email} <br> ログインID：${member.login_id} <br> <br>
-		<br> <a href="mem_Ch.jsp" class="btn btn-flat"><span>変更</span></a>
-		<a href="mem_Lev.jsp" class="btn btn-flat"><span>退会</span></a>
+		<br> <a href="mem_Ch.jsp" class="btn btn-flat"><span>　　変更　　</span></a>
+		<a href="mem_Lev.jsp" class="btn btn-flat"><span>　　退会　　</span></a>
 		<br><br>
 	<form action="/Kaihatu_ensyu2/checkReserveServlet?action=check" method="post" >
 	<input type ="submit" class="button"value="予約確認"></form>

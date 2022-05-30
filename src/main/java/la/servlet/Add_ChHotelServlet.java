@@ -58,7 +58,7 @@ public class Add_ChHotelServlet extends HttpServlet {
 				
 				session.setAttribute("hotels", list);
 
-				gotoPage(request, response, "/add_hotelInfo.jsp");
+				gotoPage(request, response, "/add_changedHotelInfo.jsp");
 			}
 		} catch (DAOException e) {
 			e.printStackTrace();

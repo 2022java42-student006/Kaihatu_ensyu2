@@ -14,6 +14,7 @@
 		
 	</div>
 		
+<<<<<<< HEAD
 		<form action="" method="post">
 			宿名　　　　　　　<input type="text" name="hotel_name"class="form-text"><br>
 			分類コード　　　　<input type="text" name="hotel_code"class="form-text"><br>
@@ -25,6 +26,17 @@
 			<br>
 			<input type="submit" value="変更" class="button">
 			<a href="add_Login.jsp"class="button" >戻る</a>
+=======
+		<form action="/Kaihatu_ensyu2/Add_ChHotelServlet?action=hotel" method="post">
+			宿名<input type="text" name="hotel_name"><br>
+			住所<input type="text" name="hotel_address"><br>
+			電話番号<input type="text" name="hotel_tel"><br>
+			部屋数<input type="text" name="hotel_room"><br>
+			チェックイン時間<input type="text" name="checkin_time"><br>
+			チェックアウト時間<input type="text" name="checkout_time"><br>
+			<input type="hidden" name="ac_id" value="${ac_id }">
+			<input type="submit" value="変更">
+>>>>>>> 6a858b09fe50fddb1ffd2ffb6a45ad50807fc18b
 		</form>
 		
 		<footer id="f3">

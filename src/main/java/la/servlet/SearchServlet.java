@@ -36,6 +36,8 @@ public class SearchServlet extends HttpServlet {
 			}
 		} catch (DAOException e) {
 			e.printStackTrace();
+			request.setAttribute("message", "エラーが発生しました");
+			gotoPage(request, response, "/errMessage.jsp");
 
 		}
 

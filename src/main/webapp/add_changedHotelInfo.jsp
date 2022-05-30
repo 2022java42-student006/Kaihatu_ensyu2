@@ -45,12 +45,8 @@
 
 	</table>
 <br>
-		<br>
-	<form action="/Kaihatu_ensyu2/Add_ChHotelServlet?action=change" method="post">
-		<input type ="hidden" name="ac_id" value ="${ hotel.ac_id}">
-		<input type="submit" value="変更">
-
-	</form>
+	<br>
+	<a href="add_hotelTop.jsp">宿管理Topへ戻る</a>
 
 	<form action="/Kaihatu_ensyu2/DeleteHotelServlet?action=confirmDelete" method="post">
 	<input type ="hidden" name="ac_id" value ="${ hotel.ac_id}">

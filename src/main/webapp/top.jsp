@@ -27,8 +27,9 @@
 				
 				
 				<form action="/Kaihatu_ensyu2/SearchHotelServlet?action=hotelsearch" method="post">
-					<input type="text" name="ac_name" placeholder="宿名を入力" class="form-text">
+					<input type="text" name="ac_Name" placeholder="宿名を入力" class="form-text">
 					<input type="submit"  value="検索" class="button">
+					<h3>${message}</h3>
 					
 					
 					<br>

@@ -14,11 +14,6 @@
 	<div class="sample_h_7">
 			<p>新宿トラベル 管理画面</p>
 	
-			<ul class="snip1217">
-					<div id="menu">
-					<li class="current">
-  					</div>
-			</ul>
 	</div>
 		
 		

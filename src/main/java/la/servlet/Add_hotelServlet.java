@@ -14,8 +14,6 @@ import la.bean.HotelBean;
 import la.dao.DAOException;
 import la.dao.HotelDAO;
 
-
-
 @WebServlet("/Add_hotelServlet")
 public class Add_hotelServlet extends HttpServlet {
 
@@ -34,7 +32,6 @@ public class Add_hotelServlet extends HttpServlet {
 			
 			bean.setCheckin_time(Integer.parseInt(request.getParameter("checkin_time")));
 			bean.setCheckout_time(Integer.parseInt(request.getParameter("checkout_time")));
-			
 			
 			HotelDAO reg = new HotelDAO();
 			int ac_id = reg.saveHotel(bean);

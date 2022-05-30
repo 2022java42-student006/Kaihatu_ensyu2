@@ -42,12 +42,14 @@ public class LoginServlet extends HttpServlet {
 				} else {
 					
 					gotoPage(request, response, "/mem_Login.jsp");
+					request.setAttribute("message", "もう一度ログインしてください");
+					
 
 				}
 
 			} catch (DAOException e) {
 				e.printStackTrace();
-				System.out.println("遷移ミス");
+				
 			}
 		}
 	}

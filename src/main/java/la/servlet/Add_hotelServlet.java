@@ -35,7 +35,7 @@ public class Add_hotelServlet extends HttpServlet {
 			
 			HotelDAO reg = new HotelDAO();
 			int ac_id = reg.saveHotel(bean);
-			reg.saveHotel(bean);
+
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("hotel", bean);

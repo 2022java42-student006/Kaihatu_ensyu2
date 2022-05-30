@@ -19,7 +19,7 @@ public class DeleteHotelDAO {
 		}
 	}
 	public void deleteByHotelID(int ac_id) throws DAOException {
-		String sql="DELETE FROM accommodation_information WHERE ac_id = ?";
+		String sql="DELETE FROM accommodation_information WHERE ac_id= ?";
 		
 		try(
 				Connection con = DriverManager.getConnection(url, user, pass);

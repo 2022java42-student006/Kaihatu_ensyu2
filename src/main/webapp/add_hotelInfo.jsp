@@ -11,9 +11,9 @@
 <body>
 	<jsp:include page="/addMenu.jsp" />
 	<h3>宿情報</h3>
-
+<c:forEach items="${hotels}" var="hotel">
 	<table border="1">
-	<c:forEach items="${hotels}" var="hotel">
+	
 		<tr>
 			<td>宿名</td>
 			<td>${hotel.ac_name}</td>
@@ -42,7 +42,7 @@
 		</tr>
 		
 		
-</c:forEach>
+
 	</table>
 <br>
 		<br>
@@ -51,10 +51,12 @@
 
 	</form>
 
-	<form action="/Kaihatu_ensyu2/add_hotelDel.jsp" method="post">
+	<form action="/Kaihatu_ensyu2/DeleteHotelServlet?action=confirmDelete" method="post">
+	<input type ="hidden" name="ac_id" value ="${ hotel.ac_id}">
 		<input type="submit" value="削除">
 
 	</form>
+	</c:forEach>
 	<br>
 	<br>
 

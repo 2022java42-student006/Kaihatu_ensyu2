@@ -25,7 +25,7 @@ public class LoginDAO {
 
 	public boolean DisplayMemInfo(int login_id, String password) throws DAOException {
 		
-		String sql = "SELECT * FROM member_information WHERE login_id = ? AND password = ? AND se_date = NULL";
+		String sql = "SELECT * FROM member_information WHERE login_id = ? AND password = ? AND se_date IS NULL;";
 		try (Connection con = DriverManager.getConnection(url, user, pass);
 				PreparedStatement st = con.prepareStatement(sql);) {
 			

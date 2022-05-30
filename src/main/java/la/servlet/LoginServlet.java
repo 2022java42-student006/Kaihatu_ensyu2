@@ -47,6 +47,7 @@ public class LoginServlet extends HttpServlet {
 
 			} catch (DAOException e) {
 				e.printStackTrace();
+				System.out.println("遷移ミス");
 			}
 		}
 	}

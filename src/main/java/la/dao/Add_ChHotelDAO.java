@@ -23,7 +23,7 @@ public class Add_ChHotelDAO {
 
 	public void saveHotel(HotelBean hotel, int i) throws DAOException {
 
-		String sql = "UPDATE accommodation_information SET ac_name = ?, ac_address= ?, ac_tel= ?, ac_room= ?,plan_id= ?,checkin_time= ?,checkout_time= ? WHERE ac_id = ?";
+		String sql = "UPDATE accommodation_information SET ac_name = ?, ac_address= ?, ac_tel= ?, ac_room= ?,checkin_time= ?,checkout_time= ? WHERE ac_id = ?";
 
 		try (Connection con = DriverManager.getConnection(url, user, pass);
 				PreparedStatement st = con.prepareStatement(sql);) {
@@ -32,11 +32,10 @@ public class Add_ChHotelDAO {
 			st.setString(2, hotel.getAc_address());
 			st.setString(3, hotel.getAc_tel());
 			st.setInt(4, hotel.getAc_room());
-			st.setInt(5, hotel.getplan_id());
-			st.setInt(6, hotel.getCheckin_time());
-			st.setInt(7, hotel.getCheckout_time());
+			st.setInt(5, hotel.getCheckin_time());
+			st.setInt(6, hotel.getCheckout_time());
 			
-			st.setInt(8, i);
+			st.setInt(7, i);
 
 			st.executeUpdate();
 

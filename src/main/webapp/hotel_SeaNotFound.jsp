@@ -20,8 +20,9 @@
 		<br>
 		<h2>該当するホテルがありません</h2>
 		
-		<form action="text" method="get">
-					<input type="search" name="search" plachholder="キーワードを入力" class="form-text">
+		<form action="/Kaihatu_ensyu2/SeachHotelServlet?action=hotelsearch" method="get">
+					<input type="search" name="search" class="form-text">
 					<input type="submit" name="submit" value="検索">
+		</form>
 </body>
 </html>

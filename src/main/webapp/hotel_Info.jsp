@@ -30,10 +30,10 @@
 <table>
 
 
-<tr><th>宿名：</th><td>データベースより取得情報が入る</td></tr>
-<tr><th>住所：</th><td>データベースより取得情報が入る</td></tr>
-<tr><th>電話番号：</th><td>データベースより取得情報が入る</td></tr>
-<tr><th>部屋数：</th><td>データベースより取得情報が入る</td></tr>
+<tr><th>宿名：</th><td>${hotel.ac_name}</td></tr>
+<tr><th>住所：</th><td>${hotel.ac_address}</td></tr>
+<tr><th>電話番号：</th><td>${hotel.ac_tel}</td></tr>
+<tr><th>部屋数：</th><td>${hotel.ac_room}</td></tr>
 <tr><th>チェックイン時間：</th><td>データベースより取得情報が入る</td></tr>
 <tr><th>チェックアウト時間：</th><td>データベースより取得情報が入る</td></tr>
 

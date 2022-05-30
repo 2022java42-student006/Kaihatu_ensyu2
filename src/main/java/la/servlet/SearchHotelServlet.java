@@ -28,12 +28,13 @@ public class SearchHotelServlet extends HttpServlet {
 
 		if (action.equals("hotelsearch")) {
 			try {
+				
 				SearchHotelDAO dao = new SearchHotelDAO();
 				HttpSession session = request.getSession();
 				String ac_name = request.getParameter("ac_Name");
 				List<HotelBean> list = dao.findHotel(ac_name);
 				session.setAttribute("hotel", list);
-				gotoPage(request, response, "/add_hotelInfo.jsp");
+				gotoPage(request, response, "/hotel_SeaNameRes.jsp");
 			} catch (DAOException e) {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();

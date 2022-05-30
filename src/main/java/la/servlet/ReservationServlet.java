@@ -58,7 +58,7 @@ public class ReservationServlet extends HttpServlet {
 						}
 					}
 					if(bool) {
-						bean.setMem_id(3);
+						bean.setMem_id(bean.getMem_id());
 						bean.setPlan_id(planid);
 						bean.setCi_date(cidate);
 						bean.setCo_date(codate);

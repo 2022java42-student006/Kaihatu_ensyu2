@@ -27,14 +27,13 @@ public class Add_hotelServlet extends HttpServlet {
 			HotelBean bean = new HotelBean();
 			
 			bean.setAc_name(request.getParameter("hotel_name"));
-			bean.setAc_code(Integer.parseInt(request.getParameter("hotel_code")));
+			
 			bean.setAc_address(request.getParameter("hotel_address"));
 			bean.setAc_tel(request.getParameter("hotel_tel"));
 			bean.setAc_Room(Integer.parseInt(request.getParameter("hotel_room")));
-			bean.setplan_id(Integer.parseInt(request.getParameter("plan_id")));
+			
 			bean.setCheckin_time(Integer.parseInt(request.getParameter("checkin_time")));
 			bean.setCheckout_time(Integer.parseInt(request.getParameter("checkout_time")));
-
 			
 			
 			HotelDAO reg = new HotelDAO();
@@ -44,6 +43,7 @@ public class Add_hotelServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("hotel", bean);
 			session.setAttribute("ac_id", ac_id);
+			
 			gotoPage(request,response,"/add_hotelPlanReg.jsp");
 		}catch(DAOException e) {
 			e.printStackTrace();

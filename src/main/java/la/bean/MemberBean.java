@@ -15,6 +15,7 @@ public class MemberBean implements Serializable {
 	private String endate;
 	private String seDate;
 
+
 	
 
 	public MemberBean(int mem_id,String name, String tel, String email, String mem_address, String birthday, int login_id, String password) {
@@ -146,11 +147,11 @@ public class MemberBean implements Serializable {
 		this.seDate = seDate;
 	}
 
-	public void setPass(String password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	public String getPass() {
+	public String getPassword() {
 		return password;
 	}
 	

@@ -29,6 +29,7 @@
 <a href="hotel_SeaNameRes.jsp">戻る</a>
 <table>
 
+
 <tr><th>宿名：</th><td>データベースより取得情報が入る</td></tr>
 <tr><th>住所：</th><td>データベースより取得情報が入る</td></tr>
 <tr><th>電話番号：</th><td>データベースより取得情報が入る</td></tr>

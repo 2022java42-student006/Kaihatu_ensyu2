@@ -8,9 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import la.bean.HotelBean;
 import la.dao.DAOException;
 import la.dao.DeleteHotelDAO;
 
@@ -26,13 +24,18 @@ public class DeleteHotelServlet extends HttpServlet {
 			DeleteHotelDAO dao = new DeleteHotelDAO();
 
 			if (action.equals("delete")) {
-				HttpSession session = request.getSession();
+				
 
-				HotelBean bean = (HotelBean) session.getAttribute("hotel");
-				int ac_id = bean.getAc_id();
+				int ac_id=Integer.parseInt(request.getParameter("ac_id"));
+				
 				dao.deleteByHotelID(ac_id);
 				gotoPage(request, response, "/add_hotelDelRes.jsp");
 				return;
+			}
+			if(action.equals("confirmDelete")) {
+				String ac_id = request.getParameter("ac_id");
+				request.setAttribute("ac_id", ac_id);
+				gotoPage(request, response, "/add_hotelDel.jsp");
 			}
 
 		} catch (DAOException e) {

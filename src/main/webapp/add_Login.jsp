@@ -40,8 +40,13 @@
 				
 				</form>
 				<br>	
-				<a href="top.jsp">戻る</a>
+				<a href="top.jsp" class="btn btn-flat"><span>戻る</span></a>
 		
-		</div>
+		
+		<footer id="f3">
+  			<h1 class="f">新宿トラベル</h1>
+ 		 	<h2 class="f1">&copy;  Shinjuku Travel</h2>
+		</footer>
+		
 	</body>
 </html>

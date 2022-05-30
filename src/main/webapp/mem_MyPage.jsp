@@ -36,11 +36,10 @@
 		E-mail:${member.email} <br> ログインID：${member.login_id} <br> <br>
 		<br> <a href="mem_Ch.jsp" class="btn btn-flat"><span>変更</span></a>
 		<a href="mem_Lev.jsp" class="btn btn-flat"><span>退会</span></a>
-	<form action="/Kaihatu_ensyu2/checkReserveServlet?action=check" method="post">
-	<input type ="submit" value="予約確認">
-	</form>
+		<br><br>
+	<form action="/Kaihatu_ensyu2/checkReserveServlet?action=check" method="post" >
+	<input type ="submit" class="button"value="予約確認"></form>
 
-<br>
 <br>
 		<form action="/Kaihatu_ensyu2/LogoutServlet?action=logout" method="post">
 			<label> <input type="submit" value="ログアウト" class="button"> <input

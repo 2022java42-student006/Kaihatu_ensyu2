@@ -11,6 +11,7 @@
 	<jsp:include page="/addMenu.jsp" />
 		<h3>削除してよろしいでしょうか。</h3>
 		<form action="/Kaihatu_ensyu2/DeleteHotelServlet?action=delete" method="post">
+		<input type ="hidden" name="ac_id" value="${ac_id}">
 <input type="submit" name ="ac_id" value=削除>
 </form>
 

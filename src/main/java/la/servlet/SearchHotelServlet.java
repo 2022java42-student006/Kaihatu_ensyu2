@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import la.bean.HotelBean;
+import la.dao.ADD_searchHotelInfoDAO;
 import la.dao.DAOException;
 import la.dao.SearchHotelDAO;
 
@@ -32,14 +33,30 @@ public class SearchHotelServlet extends HttpServlet {
 				String ac_name = request.getParameter("ac_Name");
 				List<HotelBean> list = dao.findHotel(ac_name);
 				session.setAttribute("hotel", list);
-				gotoPage(request, response, "/hotel_SeaNameRes.jsp");
+				gotoPage(request, response, "/add_hotelInfo.jsp");
 			} catch (DAOException e) {
 				// TODO 自動生成された catch ブロック
 				e.printStackTrace();
 			}
 		}
+		
+		
+		if(action.equals("search")){
+			try {
+				 ADD_searchHotelInfoDAO dao = new ADD_searchHotelInfoDAO();
+				 HttpSession session = request.getSession();
+					String ac_name = request.getParameter("ac_name");
+					List<HotelBean> list = dao.findHotel(ac_name);
+					session.setAttribute("hotels", list);
+					gotoPage(request, response, "/add_hotelInfo.jsp");
+				} catch (DAOException e) {
+					// TODO 自動生成された catch ブロック
+					e.printStackTrace();
+				}
+			}
+				 
+		}
 
-	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +11,9 @@
 <body>
 	<jsp:include page="/addMenu.jsp" />
 	<h3>宿情報</h3>
-
-	<table>
+<c:forEach items="${hotels}" var="hotel">
+	<table border="1">
+	
 		<tr>
 			<td>宿名</td>
 			<td>${hotel.ac_name}</td>
@@ -38,18 +40,23 @@
 			<td>チェックアウト時間</td>
 			<td>${hotel.checkout_time}時</td>
 		</tr>
+		
+		
 
 	</table>
-
+<br>
+		<br>
 	<form action="/Kaihatu_ensyu2/add_hotelCh.jsp" method="post">
 		<input type="submit" value="変更">
 
 	</form>
 
-	<form action="/Kaihatu_ensyu2/add_hotelDel.jsp" method="post">
+	<form action="/Kaihatu_ensyu2/DeleteHotelServlet?action=confirmDelete" method="post">
+	<input type ="hidden" name="ac_id" value ="${ hotel.ac_id}">
 		<input type="submit" value="削除">
 
 	</form>
+	</c:forEach>
 	<br>
 	<br>
 

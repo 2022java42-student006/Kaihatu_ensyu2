@@ -35,7 +35,7 @@ public class HotelBean implements Serializable {
 		this.checkin_time = checkin_time;
 		this.checkout_time = checkout_time;
 	}
-	public HotelBean(int ac_id ,String ac_name, int ac_code, String ac_address, String ac_tel, int ac_room) {
+	public HotelBean(int ac_id ,String ac_name,  String ac_address, String ac_tel, int ac_room) {
 		this.ac_id=ac_id;
 		this.ac_name=ac_name;
 		

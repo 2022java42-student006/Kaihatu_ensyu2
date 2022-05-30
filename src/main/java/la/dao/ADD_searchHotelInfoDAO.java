@@ -9,13 +9,12 @@ import java.util.List;
 
 import la.bean.HotelBean;
 
-public class SearchHotelDAO {
-	
+public class ADD_searchHotelInfoDAO {
 	private String url = "jdbc:postgresql:webinn";
 	private String user = "webinnuser";
 	private String pass = "himitu";
 
-	public SearchHotelDAO() throws DAOException {
+	public ADD_searchHotelInfoDAO() throws DAOException {
 		try {
 			Class.forName("org.postgresql.Driver");
 		} catch (ClassNotFoundException e) {
@@ -42,8 +41,9 @@ public class SearchHotelDAO {
 					String ac_address = rs.getString("ac_address");
 					String ac_tel = rs.getString("ac_tel");
 					int ac_room = rs.getInt("ac_room");
-					
-					HotelBean bean = new HotelBean(ac_id, ac_name, ac_address, ac_tel, ac_room);
+					int checkin_time = rs.getInt("checkin_time");
+					int checkout_time=rs.getInt("checkout_time");
+					HotelBean bean = new HotelBean(ac_id, ac_name, ac_address, ac_tel, ac_room,checkin_time,checkout_time);
 					list.add(bean);
 				}
 				return list;
@@ -60,4 +60,5 @@ public class SearchHotelDAO {
 		}
 		
 	}
+	
 }

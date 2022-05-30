@@ -26,7 +26,7 @@ public class Add_hotelServlet extends HttpServlet {
 			
 			HotelBean bean = new HotelBean();
 			
-			bean.setAc_name(request.getParameter("hotel/_name"));
+			bean.setAc_name(request.getParameter("hotel_name"));
 			
 			bean.setAc_address(request.getParameter("hotel_address"));
 			bean.setAc_tel(request.getParameter("hotel_tel"));

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*aタグ*/
 .button {
+	display: flef;
   display       : inline-block;
   border-radius : 5%;          /* 角丸       */
   font-size     : 10pt;        /* 文字サイズ */
@@ -22,8 +23,8 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;/*要素の全体の幅と高さを設定*/
+  box-sizing: inherit;/*親要素のスタイルを継承(inherit)で*/
 }
 
 html {
@@ -94,6 +95,10 @@ background-color: #b7efdf;/* 背景色 */
 border-bottom: 5px solid #395049;/* 下線 */
 color: #334842;/* フォント色 */
 }
+
+
+
+
 /*検索フォーム*/
 .form-text{
  width: 100%;

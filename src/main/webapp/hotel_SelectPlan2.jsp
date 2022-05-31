@@ -33,8 +33,7 @@
 
 	<form action="/Kaihatu_ensyu2/ReservationServlet?action=reserve"
 		method="post">
-		<br> <br> プランID:プラン<input type="tel" name="plan_id" size="1"
-			maxlength="4"> <br> <br> 宿泊人数:<input type="tel"
+		<br> <br> 宿泊人数:<input type="tel"
 			name="num_people" size="4" maxlength="2">人 <br> <br>
 
 		チェックイン日

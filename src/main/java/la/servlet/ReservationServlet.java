@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import la.bean.HotelBean;
 import la.bean.MemberBean;
 import la.bean.ReservationBean;
 import la.dao.DAOException;
@@ -29,7 +30,8 @@ public class ReservationServlet extends HttpServlet {
 			if (action.equals("reserve")) {
 				int cidate = Integer.parseInt(request.getParameter("ci_date"));
 				int codate = Integer.parseInt(request.getParameter("co_date"));
-				int planid = Integer.parseInt(request.getParameter("plan_id"));
+				HotelBean hotel = (HotelBean) session.getAttribute("choice");
+				int planid = hotel.getplan_id();
 				if (cidate - codate > 0) {
 					// error
 					System.out.println("日にちエラー");

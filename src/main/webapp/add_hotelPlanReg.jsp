@@ -17,9 +17,9 @@
 	
 	
 		
-		<table border=1>
-		<tr><td>宿名 </td><td>住所  </td><td>チェックイン時間  </td><td>チェックアウト時間  </td><td>電話番号</td></tr>
-		<tr><td>${hotel.ac_name}  </td><td>${hotel.ac_address}  </td><td>${hotel.checkin_time}時  </td><td>${hotel.checkout_time}  </td><td>${hotel.ac_tel}</td></tr>
+		<table border="1" style="width: 80%">
+		<tr><td class="planTable">宿名 </td><td  class="planTable">住所  </td><td  class="planTable">チェックイン時間  </td><td  class="planTable">チェックアウト時間  </td><td  class="planTable">電話番号</td></tr>
+		<tr><td>${hotel.ac_name}  </td><td>${hotel.ac_address}  </td><td>${hotel.checkin_time}時  </td><td>${hotel.checkout_time}時 </td><td>${hotel.ac_tel}</td></tr>
 		
 		
 		</table>

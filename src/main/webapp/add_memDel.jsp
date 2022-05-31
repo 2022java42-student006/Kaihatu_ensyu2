@@ -8,7 +8,17 @@
 <title>会員情報削除確認画面</title>
 </head>
 <body>
-<jsp:include page="/addMenu.jsp" />
+<div class="sample_h_7">
+			<p>新宿トラベル 管理画面</p>
+			<p>管理者ログイン</p>
+			
+	
+			<ul class="snip1217">
+					<div id="menu">
+					<li class="current">
+  					</div>
+			</ul>
+	</div>
 
 <a href="add_memCh.jsp">戻る</a><br>
 <img src="" alt="警告" >

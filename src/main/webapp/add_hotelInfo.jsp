@@ -62,6 +62,7 @@
 		<input type="submit"class="button" value="削除">
 
 	</form>
+	<br>
 	</c:forEach>
 	<br>
 	<br>

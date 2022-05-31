@@ -31,13 +31,12 @@
 			<input type="submit" class="button" value="登録">
 			<br>
 		</form>
-		<br>
+		
 
 		<table border="1">
 		<c:forEach items="${plans}" var="plan">
 		<tr><td>プラン名  </td><td>プラン内容  </td><td>金額(/人) </td><td>部屋数 </td></tr>
 		<tr><td> ${plan.plan_name}</td><td>${plan.plan_sub }  </td><td>${plan.price } </td><td>${plan.room_num } </td></tr>
-		
 		</c:forEach>
 		</table>
 		

@@ -18,13 +18,14 @@
 
 	<form action="/Kaihatu_ensyu2/Add_ChHotelServlet?action=hotel"
 		method="post">
-		宿名<input type="text" name="hotel_name"><br> 住所<input
-			type="text" name="hotel_address"><br> 電話番号<input
-			type="text" name="hotel_tel"><br> 部屋数<input type="text"
-			name="hotel_room"><br> チェックイン時間<input type="text"
-			name="checkin_time"><br> チェックアウト時間<input type="text"
-			name="checkout_time"><br> <input type="hidden"
-			name="ac_id" value="${ac_id }"> <input type="submit"
+		宿名<input type="text"class="form-text" name="hotel_name"><br> 住所<input
+			type="text"class="form-text" name="hotel_address"><br> 電話番号<input
+			type="text"class="form-text" name="hotel_tel"><br> 部屋数<input type="text"class="form-text"
+			name="hotel_room"><br> チェックイン時間<input type="text"class="form-text"
+			name="checkin_time"><br> チェックアウト時間<input type="text"class="form-text"
+			name="checkout_time"><br> 
+			<br><br><input type="hidden"class="form-text"
+			name="ac_id" value="${ac_id }"> <input type="submit"class="button"
 			value="変更"> <a href="add_Login.jsp" class="button">戻る</a>
 	</form>
 

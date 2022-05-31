@@ -23,8 +23,10 @@
 		<br>
 		<form action="/Kaihatu_ensyu2/DeleteHotelServlet?action=delete" method="post">
 		<input type ="hidden" name="ac_id" value="${ac_id}">
+		<br>
 <input type="submit" name ="ac_id" class="button" value=削除>
 </form>
+<br>
 <form action="/Kaihatu_ensyu2/add_hotelInfo.jsp"><input type="submit"class="button" value="キャンセル"></form>
 <footer id="f3">
   			<h1 class="f">新宿トラベル</h1>

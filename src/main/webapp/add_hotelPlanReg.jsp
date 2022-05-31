@@ -4,13 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>ホテルプラン情報登録</title>
 </head>
 
 	<body>
-	<jsp:include page="/addMenu.jsp" />
-		<h3>宿プラン登録</h3>
+	<div class="sample_h_7">
+			<p>新宿トラベル 管理画面</p>
+			<p>宿プラン登録</p>		
+	</div>
+	
 		
 		<table border=1>
 		<tr><td>宿名 </td><td>住所  </td><td>チェックイン時間  </td><td>チェックアウト時間  </td><td>電話番号</td></tr>
@@ -20,14 +24,15 @@
 		</table>
 		
 		<form action="/Kaihatu_ensyu2/Add_RegHotelPlanServlet" method="post">
-			プラン名<input type="text" name="plan_name"><br>
-			プラン内容<input type="text" name="plan_sub"><br>
-			金額<input type="text" name="price"><br>
-			部屋数<input type="text" name="room_num"><br>
-			<input type="submit"  value="登録">
+			プラン名<input type="text" name="plan_name"class="form-text"><br>
+			プラン内容<input type="text" name="plan_sub"class="form-text"><br>
+			金額<input type="text" name="price"class="form-text"><br>
+			部屋数<input type="text" name="room_num"class="form-text"><br>
+			<input type="submit" class="button" value="登録">
+			<br>
 		</form>
-		
-		
+		<br>
+
 		<table border="1">
 		<c:forEach items="${plans}" var="plan">
 		<tr><td>プラン名  </td><td>プラン内容  </td><td>金額(/人) </td><td>部屋数 </td></tr>
@@ -36,8 +41,12 @@
 		</c:forEach>
 		</table>
 		
-	
+	<br>
 		
-		<a href="/Kaihatu_ensyu2/TopServlet">トップに戻る</a>
+		<a href="/Kaihatu_ensyu2/TopServlet" class="btn btn-flat"><span>トップに戻る</span></a>
+		<footer id="f3">
+  			<h1 class="f">新宿トラベル</h1>
+ 		 	<h2 class="f1">&copy;  Shinjuku Travel</h2>
+		</footer>
 	</body>
 </html>

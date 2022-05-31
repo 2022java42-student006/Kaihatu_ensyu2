@@ -94,6 +94,7 @@ public class PlanDAO {
 					String plsub = rs.getString("plan_sub");
 					int price = rs.getInt("price");
 					HotelBean bean = new HotelBean(acname, acadd, plname, plsub, price);
+					bean.setplan_id(plan_id);
 					return bean;
 				}
 				return null;

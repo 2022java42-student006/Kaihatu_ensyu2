@@ -50,7 +50,7 @@
 
 <form action="/Kaihatu_ensyu2/add_memCh.jsp" method="post">
 <input type="submit"class="button" value="変更">
- 
+ </form>
 <br>
 <br>
 

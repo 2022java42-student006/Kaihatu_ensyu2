@@ -15,6 +15,7 @@
 			<p>宿プラン登録</p>		
 	</div>
 	
+	
 		
 		<table border="1" style="width: 80%">
 		<tr><td class="planTable">宿名 </td><td  class="planTable">住所  </td><td  class="planTable">チェックイン時間  </td><td  class="planTable">チェックアウト時間  </td><td  class="planTable">電話番号</td></tr>

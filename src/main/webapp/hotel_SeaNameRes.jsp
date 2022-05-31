@@ -20,7 +20,7 @@
 			<li class="current"><a href="top.jsp">ホーム</a></li>
 			<li><a href="mem_MyPage.jsp">マイページ</a></li>
 			<li><a href="mem_Reg.jsp">会員登録</a></li>
-			<li><a href="mem_Bc.jsp">予約確認</a></li>
+			<li><a href="/Kaihatu_ensyu2/CheckReserveServlet?action=check">予約確認</a></li>
 		</div>
 	</ul>
 	</div>
@@ -29,7 +29,6 @@
 	<br>
 	<br>
 
-<form action="/Kaihatu_ensyu2/SearchHotelServlet" method="post">
 	<table border="1">
 		<tr>
 			<td>宿検索結果</td>
@@ -37,13 +36,13 @@
 		<c:forEach items="${hotel}" var="item">
 
 		<tr>
-			<td>宿名：<a href="/Kaihatu_ensyu2/hotel_Info">${item.ac_name}</a>　住所：${item.ac_address}</td>
+			<td>宿名：<a href="/Kaihatu_ensyu2/SearchPlanServlet?action=hotel&acid=${item.ac_id}">${item.ac_name}</a>　住所：${item.ac_address}</td>
 		</tr>
 		</c:forEach>
 		
 
 	</table>
-</form>
+
 	<br>
 	<br>
 	<footer id="f3">

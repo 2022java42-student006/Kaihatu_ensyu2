@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,10 +12,27 @@
 <body>
 
 	<a href="hotel_SelectPlan1.jsp">戻る</a>
+	<table border="1">
+		<tr>
+			<td>宿名</td>
+			<td>住所</td>
+			<td>プラン名</td>
+			<td>プラン内容</td>
+			<td>価格（1人当たり）</td>
+		</tr>
+
+		<tr>
+			<td align="center">${choice.ac_name}</td>
+			<td align="center">${choice.ac_address}</td>
+			<td align="center">${choice.plan_name}</td>
+			<td align="center">${choice.plan_sub}</td>
+			<td align="center">${choice.price}円</td>
+		</tr>
+
+	</table>
+
 	<form action="/Kaihatu_ensyu2/ReservationServlet?action=reserve"
 		method="post">
-		<p>○○ホテル・プラン○○(データベースより取得)</p>
-		<p>金額：￥○○(データベースより取得)</p>
 		<br> <br> プランID:プラン<input type="tel" name="plan_id" size="1"
 			maxlength="4"> <br> <br> 宿泊人数:<input type="tel"
 			name="num_people" size="4" maxlength="2">人 <br> <br>

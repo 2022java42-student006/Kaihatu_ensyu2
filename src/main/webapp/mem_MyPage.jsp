@@ -37,7 +37,7 @@
 		<br> <a href="mem_Ch.jsp" class="btn btn-flat"><span>　　変更　　</span></a>
 		<a href="mem_Lev.jsp" class="btn btn-flat"><span>　　退会　　</span></a>
 		<br><br>
-	<form action="/Kaihatu_ensyu2/checkReserveServlet?action=check" method="post" >
+	<form action="/Kaihatu_ensyu2/CheckReserveServlet?action=check" method="post" >
 	<input type ="submit" class="button"value="予約確認"></form>
 
 <br>

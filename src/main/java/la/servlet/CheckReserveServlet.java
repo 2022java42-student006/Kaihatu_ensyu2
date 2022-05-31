@@ -37,7 +37,7 @@ public class CheckReserveServlet extends HttpServlet {
 				CheckDAO dao = new CheckDAO();
 				List<ReservationBean> list = dao.listReservarion(mem_id);
 				request.setAttribute("relist", list);
-				gotoPage(request, response, "/CheckReservation.jsp");
+				gotoPage(request, response, "CheckReservation.jsp");
 			} catch (DAOException e) {
 				e.printStackTrace();
 			}

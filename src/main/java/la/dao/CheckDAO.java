@@ -27,8 +27,8 @@ public class CheckDAO {
 
 	public List<ReservationBean> listReservarion(int mem_id) throws DAOException {
 		String sql = "SELECT ac.ac_name,ac.ac_address,pl.plan_name,pl.plan_sub,pl.price,re.num_people,re.ci_date,ac.checkin_time,re.co_date,ac.checkout_time "
-				+ "FROM(reservation re INNER JOIN plan_information pl ON re.plan_id=pl.plan_id)\r\n"
-				+ "INNER JOIN accommodation_information ac ON pl.ac_id=ac.ac_id WHERE mem_id = ?;";
+				+ "FROM(reservation re INNER JOIN plan_information pl ON re.plan_id=pl.plan_id)"
+				+ "INNER JOIN accommodation_information ac ON pl.ac_id=ac.ac_id WHERE mem_id = ?";
 
 		try (Connection con = DriverManager.getConnection(url, user, pass);
 				PreparedStatement ps = con.prepareStatement(sql);) {

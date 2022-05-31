@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import la.bean.MemberBean;
 import la.bean.ReservationBean;
 import la.dao.DAOException;
 import la.dao.ReservationDAO;
@@ -36,6 +37,7 @@ public class ReservationServlet extends HttpServlet {
 				} else {
 					ReservationDAO dao = new ReservationDAO();
 					List<ReservationBean> list = dao.CheckDate(planid);
+					MemberBean member = (MemberBean)session.getAttribute("member");
 					ReservationBean bean = new ReservationBean();
 					Boolean bool = true;
 					
@@ -58,7 +60,7 @@ public class ReservationServlet extends HttpServlet {
 						}
 					}
 					if(bool) {
-						bean.setMem_id(bean.getMem_id());
+						bean.setMem_id(member.getMem_id());
 						bean.setPlan_id(planid);
 						bean.setCi_date(cidate);
 						bean.setCo_date(codate);

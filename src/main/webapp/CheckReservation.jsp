@@ -4,18 +4,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="/Kaihatu_ensyu2/css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>予約確認</title>
 </head>
 <body>
+<div class="sample_h_7">
+			<p>予約確認</p>
+</div>
 
-
-	<h3>現在の予約</h3>
 
 	<br>
 	<br>
-	<a href="mem_MyPage.jsp">マイページに戻る</a>
-
+	<a href="mem_MyPage.jsp"class="btn btn-flat"><span>マイページに戻る</span></a>
+	<br>
+<br>
 	<table border="1">
 		<tr>
 			<td>宿名</td>
@@ -44,5 +47,10 @@
 			</tr>
 		</c:forEach>
 	</table>
+	
+	<footer id="f3">
+  			<h1 class="f">新宿トラベル</h1>
+ 		 	<h2 class="f1">&copy;  Shinjuku Travel</h2>
+		</footer>
 </body>
 </html>
